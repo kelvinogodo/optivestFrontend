@@ -74,7 +74,7 @@ body {
 }
 :root {
   --primary-color: black;
-  --secondary-color: rgb(89, 89, 91);
+  --secondary-color: rgb(179, 179, 179);
   --secondary-mild: rgb(2, 9, 65);
   --mild-color: #e9e9e9;
   --dark-mild: rgb(43, 43, 43);

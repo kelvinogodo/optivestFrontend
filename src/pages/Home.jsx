@@ -5,7 +5,7 @@ import Service from '../components/service/Service'
 import Plan from '../components/plans/Plan'
 import About from '../components/about/About'
 import Feature from '../components/feature/Feature'
-import Roadmap from '../components/roadmap/Roadmap'
+import Copytrade from '../components/copytrade/Copytrade'
 import Faq from '../components/Faq/Faq'
 import Review from '../components/review/Review'
 import Contact from '../components/contact/Contact'
@@ -20,10 +20,8 @@ const Home = () => {
   return (
     <main className='home-img'>
       <Landpage />
-      {/* <Videoframe /> */}
+      <Copytrade />
       <Why />
-        
-        {/* <TradeInfo /> */}
       <About />
       <TeslaWidgetContainer />
       <CryptoNewsContainer />

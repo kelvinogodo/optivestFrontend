@@ -17,7 +17,7 @@
 
  @media screen and (max-width: 767px){
     .about-copy-trade-section {
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: 90%;
     }
     

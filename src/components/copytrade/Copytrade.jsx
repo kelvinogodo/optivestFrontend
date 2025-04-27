@@ -7,13 +7,13 @@ const Copytrade = () => {
       <div className='about-section copy-trade-section' id='about'>
           <div className="about-wrapper copy-trade-wrapper about-copy-trade-section">
               
-            <div className="why-choose-us-text-container about-text copy-trade-text">
-                <div className="header" data-aos="fade-up">
+            <div className="why-choose-us-text-container about-text copy-trade-text" data-aos="fade-up">
+                <div className="header" >
                 <span className="header-line"></span>
                 <h2 >what we do at</h2>
                 </div>
-                <h1 data-aos="fade-up" className='copytrade-header'>stockedgecapital</h1>
-                <p data-aos="fade-up">
+                <h1  className='copytrade-header'>stockedgecapital</h1>
+                <p >
                 At stockedgecapital, we provide accurate forex analysis to help investors maximize profits through copy trading. Using MT4 and MT5, our experts analyze the markets with technical and fundamental strategies, identifying high-probability trades. We share real-time signals, market updates, and risk assessments directly through our Telegram channel, allowing investors to copy top-performing trades effortlessly.
                   </p>
                   <button
@@ -39,7 +39,7 @@ const Copytrade = () => {
 
         </div>
         <div className="about-img-container" data-aos="fade-up">
-            <img src="/stockedgelogo11.png" className='forex-img '/>
+            <img src="/apexmockup19.png" className='forex-img '/>
             </div>
         </div>
     </div>

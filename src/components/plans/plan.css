@@ -23,11 +23,11 @@
   border-radius: 12px;
   padding: 1.6rem;
   color: #fff;
-  border: 1px solid rgba(70, 123, 255, 0.491);
+  border: 1px solid #545454;
   margin: 15px 0px;
 }
 .pack-container:hover{
-  border: 1px solid rgba(70, 123, 255, 0.741);
+  border: 1px solid #838383;
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
@@ -138,11 +138,10 @@
   font-size: 1rem;
   font-weight: 400;
   font-family: 'Poppins';
-  background-color: var(--secondary-color);
+  background-color: rgb(31, 31, 31);
 }
 .buttons-container button:hover{
-  background-color: var(--dark
-  );
+  background-color: rgb(82, 82, 82);
   color: white;
   transition: .1s ease-in-out all;
   cursor: pointer;

@@ -8,15 +8,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0px;
+    background-color: black ;
 }
 .gold-landpage{
     background-image: url(/public/pexels-michael-steinberg-366551.jpg);
+    background-color: black;
 }
 .real-landpage{
     background-image: url(/public/pexels-sevenstorm-juhaszimrus-439416.jpg);
+    background-color: black;
 }
 .agrotech-landpage{
     background-image: url(/public/Invest4Land-Agriculture-Real-Estate-Investment-Investing-Farmland-Farming-Agrobusiness-Investor-Property-Managed-Farmland-Turkey-Spain-Almond-Walnut0.jpg);
+    background-color: black;
 }
 .gold-text{
     display: flex;
@@ -25,7 +29,7 @@
     flex-direction: column;
     padding: 30px 40px 60px 40px;
     text-align: left;
-    background-color: white;
+    background-color: black;
     width: 100%;
 }
 .gold-text h2{

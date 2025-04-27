@@ -1,7 +1,6 @@
 import React from 'react'
 import Landpage from '../components/Landpage/Landpage'
 import Why from '../components/why/Why'
-import Service from '../components/service/Service'
 import Plan from '../components/plans/Plan'
 import About from '../components/about/About'
 import Feature from '../components/feature/Feature'
@@ -23,6 +22,7 @@ const Home = () => {
       <Copytrade />
       <Why />
       <About />
+      <Plan />
       <TeslaWidgetContainer />
       <CryptoNewsContainer />
       <Faqcard />

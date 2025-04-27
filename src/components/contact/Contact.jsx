@@ -2,10 +2,7 @@ import React from 'react'
 import './contact.css'
 import {BsFillWalletFill, BsWhatsapp} from 'react-icons/bs'
 import {FaPhone,FaTelegramPlane} from 'react-icons/fa'
-import {AiOutlineMail} from 'react-icons/ai'
 import {FiMail} from 'react-icons/fi'
-import { useState ,useRef} from 'react'
-import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 const Contact = () => {
     
@@ -36,15 +33,15 @@ const Contact = () => {
                 Any question? Reach out to us and we’ll get back to you shortly.
             </p>
             <div className="contact-card" data-aos="fade-up">
-                <a href='https://t.me/+HqNYmvaCKL9hNmU0' className="ball contact-ball" target='blank'>
+                {/* <a href='https://t.me/+HqNYmvaCKL9hNmU0' className="ball contact-ball" target='blank'>
                     <FaTelegramPlane />
-                </a>
+                </a> */}
                 <a href='mailto:stockedgecapital@gmail.com' className="ball contact-ball" target='blank'>
                     <FiMail />
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=447529602972"className="ball contact-ball" target='blank'>
+                {/* <a href="https://api.whatsapp.com/send?phone=447529602972"className="ball contact-ball" target='blank'>
                     <BsWhatsapp />
-                </a>
+                </a> */}
             </div>
         </div>
         <div className="contact-form-container">

@@ -1,18 +1,87 @@
-.mt5-trade-section{
-    padding: 40px 0px 60px 0px;
+.service-section {
+    width: 100%;
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.mt5-img{
-    border-radius: 20px;
+
+.service-card-container {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
 }
-.mt5-img img{
-    border-radius: 20px;
-    border: 2px solid rgba(70, 123, 255, 0.491);
+
+.gold-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
-@media (max-width: 990px) {
-    .mt5-wrapper{
-        flex-direction: column-reverse;
+
+.gold-card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.gold-card-text {
+    height: 60%;
+    padding: 20px;
+    text-align: left;
+}
+
+.gold-card-text a:hover {
+    background-color: rgb(237, 176, 22);
+    transition: all .3s ease-in-out;
+}
+
+.gold-card-text a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: white;
+    background-color: var(--color-variant);
+    border-radius: 10px;
+    text-transform: capitalize;
+    width: fit-content;
+}
+
+.gold-card-text p {
+    margin: 10px 0px;
+    color: whitesmoke;
+}
+
+.gold-card-text small {
+    color: whitesmoke;
+}
+
+@media (max-width: 990px) and (min-width: 768px) {
+    .service-card-container {
+        flex-wrap: wrap;
     }
-    .mt5-text{
-        margin-top: 40px;
+
+    .gold-card {
+        width: 350px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gold-card {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .service-card-container {
+        flex-direction: column;
     }
 }

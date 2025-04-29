@@ -45,7 +45,6 @@ const Policy = () => {
               </p>
             </div>
       </div>
-      <About />
       <Contact />
       
       </main>

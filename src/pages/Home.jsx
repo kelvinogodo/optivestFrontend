@@ -21,9 +21,9 @@ const Home = () => {
       <Landpage />
       <Copytrade />
       <Why />
-      <About />
+      {/* <About /> */}
       <Plan />
-      <TeslaWidgetContainer />
+      {/* <TeslaWidgetContainer /> */}
       <CryptoNewsContainer />
       <Faqcard />
       <ForexAnalysisSection />

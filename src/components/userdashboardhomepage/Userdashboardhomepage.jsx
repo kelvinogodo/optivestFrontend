@@ -128,10 +128,10 @@ const Userdashboardhomepage = ({route}) => {
                   <MdAccountBalanceWallet />
               </div>
               <div className="withdrawll-card-text-container">
-                <h2>Main Balance</h2>
+                <h2>total profit</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2>  <small>$</small> { userData && userData.totalprofit}</h2>
+                <h2>  <small>$</small> { userData && userData.periodicProfit}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -139,10 +139,10 @@ const Userdashboardhomepage = ({route}) => {
                   <MdAccountBalance />
               </div>
               <div className="withdrawll-card-text-container">
-                <h2>total profit</h2>
+                <h2>bonus</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2> <small>$</small> { userData && userData.totalwithdraw}</h2>
+                <h2> <small>$</small> { userData && userData.refBonus}</h2>
               </div>
             </div>
             <div class="withdrawll-card">

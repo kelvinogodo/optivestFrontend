@@ -139,7 +139,7 @@ const Userdashboardhomepage = ({route}) => {
                   <MdAccountBalance />
               </div>
               <div className="withdrawll-card-text-container">
-                <h2>bonus</h2>
+                <h2>bonus earned</h2>
               </div>
               <div className="withdrawll-card-amount">
                 <h2> <small>$</small> { userData && userData.refBonus}</h2>

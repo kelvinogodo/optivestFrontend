@@ -8,9 +8,13 @@ const TypoAnime = () => {
         1000, 
         'foreign exchange',
         1000,
-        'copy trading',
+        'oil and gas',
         1000,
         'stocks $ ETFs',
+        1000,
+        'real estate',
+        1000,
+        'agrotech',
         1000
       ]}
       wrapper="span"

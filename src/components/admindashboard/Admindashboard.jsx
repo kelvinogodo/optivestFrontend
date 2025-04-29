@@ -295,7 +295,7 @@ const Admindashboard = ({ route }) => {
           </div>
           <div class="title_container">
             <p class="titles">welcome admin</p>
-             <span class="subtitle">Welcome to stockedgecapital, login and enjoy the best investment experience.</span>
+             <span class="subtitle">Welcome to Boardbank Admin login</span>
           </div>
           <br/>
           <div class="input_containers">

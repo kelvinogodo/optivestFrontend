@@ -18,7 +18,7 @@ const Mt5Section = () => {
               <div className="gold-card-text">
                   <small>09/07/17</small>
                   <h3>gold stock investment</h3>
-                  <p>Wealth Flow Invest is a premier gold stock investment company dedicated to guiding our clients through the world of gold investments. Our mission is to empower clients with the knowledge they need to make confident and informed decisions....</p>
+                  <p>Boardbank is a premier gold stock investment company dedicated to guiding our clients through the world of gold investments. Our mission is to empower clients with the knowledge they need to make confident and informed decisions....</p>
                   <Link to="/goldstock">read more</Link>
               </div>
               </div>
@@ -27,7 +27,7 @@ const Mt5Section = () => {
               <div className="gold-card-text">
                   <small>01/09/16</small>
                   <h3>real estate and housing</h3>
-                  <p>In an era where financial stability and the pursuit of Wealth Flow Invest are paramount, real estate investment has become an exceptionally rewarding opportunity..</p>
+                  <p>In an era where financial stability and the pursuit of Boardbank are paramount, real estate investment has become an exceptionally rewarding opportunity..</p>
                   <Link to="/realestate">read more</Link>
               </div>
               </div>
@@ -37,7 +37,7 @@ const Mt5Section = () => {
                   <small>03/03/17</small>
                   <h3>agro-tech investment</h3>
                   <p>
-                    In an era of rapidly advancing technology, the agricultural sector has undergone a remarkable transformation. Agrotech investments have become a highly promising avenue for generating Wealth Flow Invest.</p>
+                    In an era of rapidly advancing technology, the agricultural sector has undergone a remarkable transformation. Agrotech investments have become a highly promising avenue for generating Boardbank.</p>
                       <Link to="/agrotech">read more</Link>
               </div>
               </div>

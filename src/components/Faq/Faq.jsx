@@ -7,14 +7,14 @@ const Faq = () => {
         {
             id:1,
             active:true,
-            question:'What is STOCKEDGECAPITAL?',
-            answer:"STOCKEDGECAPITAL is an online platform that maximizes the slight differences in prices of global forex exchange rate and investment in gold stock, real estate, crude oil and agro-tech to inturn satisfy her clients.",
+            question:'What is BOARDBANK?',
+            answer:"BOARDBANK is an online platform that maximizes the slight differences in prices of global forex exchange rate and investment in gold stock, real estate, crude oil and agro-tech to inturn satisfy her clients.",
         },
         {
             id:2,
             active:false,
             question:'where does the investment go into?',
-            answer:"STOCKEDGECAPITAL reinvests the funds generated from this platform, into real estate, gold stock investment, agro-tech industries and oil exploration industries around the world. these industries generate enough revenue to constantly satisfy the client's returns, and keep the company running",
+            answer:"BOARDBANK reinvests the funds generated from this platform, into real estate, gold stock investment, agro-tech industries and oil exploration industries around the world. these industries generate enough revenue to constantly satisfy the client's returns, and keep the company running",
         },
         {
             id:3,
@@ -32,7 +32,7 @@ const Faq = () => {
             id:5,
             active:false,
             question:'What cryptocurrencies can I use?',
-            answer:'STOCKEDGECAPITAL supports at least 3 crypto currencies for transactions which include BTC, USDT, ETHEREUM. We plan on supporting more crypto currencies in the near future.',
+            answer:'BOARDBANK supports at least 3 crypto currencies for transactions which include BTC, USDT, ETHEREUM. We plan on supporting more crypto currencies in the near future.',
         },
     ])
 
@@ -51,7 +51,7 @@ const Faq = () => {
                 </div>
                 <h1 data-aos="fade-up">frequently asked questions</h1>
                 {/* <p data-aos="fade-up">
-                We’ve provided some information about STOCKEDGECAPITAL, STOCKEDGECAPITAL Plans, cryptocurrencies, and few other common questions you might want to ask. If you have any other questions, contact our live support system or email address.
+                We’ve provided some information about BOARDBANK, BOARDBANK Plans, cryptocurrencies, and few other common questions you might want to ask. If you have any other questions, contact our live support system or email address.
                 </p> */}
             </div>
         </div>

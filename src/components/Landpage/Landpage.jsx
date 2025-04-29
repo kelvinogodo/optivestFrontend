@@ -19,14 +19,14 @@ const Landpage = () => {
                     transition={{duration:0.65,delay:0.2}}
                 >
                    
-                    Automated Trading Is Even better now <TypoAnime />
+                    take your investments in <TypoAnime /> to a next level with 
                 </motion.h1>
                 <motion.p
                     initial={{y:45, opacity:0}}
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.4}}
                 >
-                    Providing you the opportunity to copy experts in more than 50 assets for continuous income. 
+                    Trust us to navigate the complexities of the investment market, while you sit back and watch your wealth flourish. It's time to unlock your financial potential and embark on a prosperous journey with us.
                 </motion.p>
                 <motion.button className='launch-btn'
                     initial={{y:45, opacity:0}}

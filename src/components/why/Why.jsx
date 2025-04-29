@@ -11,7 +11,7 @@ const Why = () => {
                 <span className="header-line"></span>
                 <h2>get started with</h2>
             </div>
-            <h1 data-aos="fade-up">stockedgecapital</h1>
+            <h1 data-aos="fade-up">Boardbank</h1>
             <p data-aos="fade-up">follow these simple steps to start your best investment journey</p>
         </div>
         <div className="why-choose-us-card-container">

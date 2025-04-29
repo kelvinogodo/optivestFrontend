@@ -12,16 +12,16 @@ const GoldPage = () => {
             </div>
         </section>
         <section className='gold-text'>
-          <h2>Understanding Gold Investments: A Guide by vertexglobalwealth</h2> 
+          <h2>Understanding Gold Investments: A Guide by Boardbank</h2> 
           <small>09/07/17</small>
                 <h3>Introduction:</h3>
-                <p>vertexglobalwealth is a leading gold stock investment company committed to helping our clients navigate the world of gold investments. With the aim of ensuring our clients make informed decisions, we believe it is crucial to provide a comprehensive understanding of how gold investments work. In this article, we will explain the fundamentals of gold investment and shed light on its potential benefits and risks.</p>
+                <p>Boardbank is a leading gold stock investment company committed to helping our clients navigate the world of gold investments. With the aim of ensuring our clients make informed decisions, we believe it is crucial to provide a comprehensive understanding of how gold investments work. In this article, we will explain the fundamentals of gold investment and shed light on its potential benefits and risks.</p>
 
                 <h3>The Significance of Gold:</h3>
                 <p>Gold has held a prominent position as a valuable asset for centuries. Its enduring allure can be attributed to its scarcity, durability, and inherent beauty. Unlike paper currencies, gold is not subject to the same volatility and uncertainties. As a result, many investors view gold as a safe haven during economic downturns or geopolitical crises.</p>
 
                 <h3> Types of Gold Investments:</h3>
-                <p>vertexglobalwealth offers several avenues for gold investment, including:</p>
+                <p>Boardbank offers several avenues for gold investment, including:</p>
 
                 <p><b>a. Physical Gold</b>: This involves purchasing and owning gold in physical form, such as coins, bars, or jewelry. Physical gold offers the advantage of direct ownership and tangible asset allocation.</p>
 
@@ -39,7 +39,7 @@ const GoldPage = () => {
                 <p><b>c. Central Bank Policies</b>: Central banks' decisions regarding interest rates and monetary policies can affect gold prices. Lower interest rates generally favor gold investment, as it reduces the opportunity cost of holding non-yielding assets.</p>
 
                 <h3> Benefits of Gold Investment:</h3>
-                <p>Investing in gold through vertexglobalwealth offers several advantages:</p>
+                <p>Investing in gold through Boardbank offers several advantages:</p>
 
                 <p><b>a. Diversification</b>: Gold serves as an excellent diversification tool, as its price movements are often uncorrelated with other asset classes like stocks and bonds. It can help mitigate overall portfolio risk.</p>
 
@@ -57,7 +57,7 @@ const GoldPage = () => {
                 <p><b>c. Opportunity Cost</b>: Gold does not generate income or dividends, unlike stocks or bonds. Therefore, investors may miss out on potential income from other investments.</p>
 
                 <h3>Conclusion:</h3>
-        <p> Understanding the basics of gold investment is crucial for investors seeking to diversify their portfolios and hedge against uncertainties. As a trusted gold stock investment company, vertexglobalwealth aims to empower our clients with knowledge and guidance to make informed investment decisions. By considering the benefits and risks associated with gold investments, investors can navigate this market with confidence and maximize their chances of long-term success.</p><br />
+        <p> Understanding the basics of gold investment is crucial for investors seeking to diversify their portfolios and hedge against uncertainties. As a trusted gold stock investment company, Boardbank aims to empower our clients with knowledge and guidance to make informed investment decisions. By considering the benefits and risks associated with gold investments, investors can navigate this market with confidence and maximize their chances of long-term success.</p><br />
         <small>by John picco </small>
         <small>Media Manager</small>
       </section>

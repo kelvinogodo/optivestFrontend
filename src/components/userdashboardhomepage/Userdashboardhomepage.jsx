@@ -8,12 +8,15 @@ import {FaUser} from 'react-icons/fa'
 import {MdOutlineContentCopy} from 'react-icons/md'
 import { FiLink } from 'react-icons/fi'
 import { FaUsers } from 'react-icons/fa'
+import { MdCurrencyExchange } from "react-icons/md";
+import { BiMoneyWithdraw } from "react-icons/bi";
 import { FaExchangeAlt,FaHandHoldingUsd } from 'react-icons/fa'
 import { CgArrowsExchange } from 'react-icons/cg'
 import Loader from '../Loader'
-import TradingViewFinancials from '../TradingViewFinancials'
+import { MdAccountBalanceWallet } from "react-icons/md";
 import TradingViewTechnicalAnalysis from '../TradingViewTechnicalAnalysis'
 import TeslaWidget from '../TeslaWidget'
+import { MdAccountBalance } from "react-icons/md";
 const Userdashboardhomepage = ({route}) => {
     const navigate = useNavigate()
     const [clipBoard, setClipBoard] = useState(false)
@@ -90,36 +93,7 @@ const Userdashboardhomepage = ({route}) => {
                           <FaHandHoldingUsd />withdraw
                       </button>
           </div> 
-          <div className="withdrawll-card-container">
-            <div class="withdrawll-card">
-              <p class="time-text"><span class="time-sub-text">$</span><span>{ userData && userData.totalprofit}</span></p>
-            <div className="small-card">
-                {/* <CgArrowsExchange /> */}
-                <p class="day-text">total profit</p>
-              </div>
-            </div>
-            <div class="withdrawll-card">
-              <p class="time-text"><span class="time-sub-text">$</span><span>{ userData && userData.totalwithdraw}</span></p>
-           <div className="small-card">
-                {/* <CgArrowsExchange /> */}
-                <p class="day-text">total withdrawal</p>
-              </div>
-            </div>
-            <div class="withdrawll-card">
-              <p class="time-text"><span class="time-sub-text">$</span><span>{ userData && userData.periodicProfit}</span></p>
-            <div className="small-card">
-                {/* <CgArrowsExchange /> */}
-                <p class="day-text">bonus</p>
-              </div>
-            </div>
-            <div class="withdrawll-card">
-              <p class="time-text"><span class="time-sub-text">$</span><span>{userData && userData.totaldeposit}</span></p>
-              <div className="small-card">
-                {/* <CgArrowsExchange /> */}
-                <p class="day-text">total deposit</p>
-              </div>
-            </div>
-          </div>
+          
             <div className="overview-container">
                       <div className="overview-card">
                         <div className="overview-icon-wrapper" onClick={()=>navigate('/myprofile')}>
@@ -148,20 +122,68 @@ const Userdashboardhomepage = ({route}) => {
                         </div>             
                     </div>
           </div>
-          <section className='trading-view-forex-section dashboard-forex-section'>
-                      <div className="videoframe-text-container" data-aos="fade-up">
+          <div className="withdrawll-card-container">
+            <div class="withdrawll-card">
+              <div className="withdrawll-card-icon-container">
+                  <MdAccountBalanceWallet />
+              </div>
+              <div className="withdrawll-card-text-container">
+                <h2>Main Balance</h2>
+              </div>
+              <div className="withdrawll-card-amount">
+                <h2>  <small>$</small> { userData && userData.totalprofit}</h2>
+              </div>
+            </div>
+            <div class="withdrawll-card">
+               <div className="withdrawll-card-icon-container purple">
+                  <MdAccountBalance />
+              </div>
+              <div className="withdrawll-card-text-container">
+                <h2>total profit</h2>
+              </div>
+              <div className="withdrawll-card-amount">
+                <h2> <small>$</small> { userData && userData.totalwithdraw}</h2>
+              </div>
+            </div>
+            <div class="withdrawll-card">
+              <div className="withdrawll-card-icon-container pink">
+                  <MdCurrencyExchange />
+              </div>
+              <div className="withdrawll-card-text-container">
+                <h2>total deposit</h2>
+              </div>
+              <div className="withdrawll-card-amount">
+               
+                <h2> <small>$</small> { userData && userData.periodicProfit}</h2>
+              </div>
+            </div>
+            <div class="withdrawll-card">
+              <div className="withdrawll-card-icon-container gold">
+                  <BiMoneyWithdraw />
+              </div>
+              <div className="withdrawll-card-text-container">
+                <h2>total withdrawal</h2>
+              </div>
+              <div className="withdrawll-card-amount">
+                <h2> <small>$</small> { userData && userData.totaldeposit}</h2>
+              </div>
+            </div>
+          </div>
+
+          <section className='trading-view-forex-section dashboard-forex-section' data-aos="fade-up">
+                      <div className="videoframe-text-container" >
                         <h1>market <span className="highlight">analysis </span></h1>
                       </div>
-                    <div className="trading-view-forex-wrapper">
+                    <div className="trading-view-forex-wrapper dashboard-f-wrap">
                         <div className="trading-view-card">
-                            <div className="trading-view-card-text-container" data-aos="fade-up">
+                            <div className="trading-view-card-text-container" >
                                 <h1>Technical Analysis</h1>
                                 <p>See what the technical analysis says about a given symbol with our display ratings, made for easy viewing.</p>
                             </div>
                             <TeslaWidget />
                         </div>
                         <div className="trading-view-card">
-                            <div className="trading-view-card-text-container" data-aos="fade-up">
+                            <div className="trading-view-card-text-container" >
                                 <h1>Fundamental Data</h1>
                                 <p>Kick the tires on the fundamentals with this deep dive into how a company is doing beyond simply its stock price.</p>
                             </div>

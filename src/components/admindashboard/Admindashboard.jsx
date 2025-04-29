@@ -46,13 +46,13 @@ const Admindashboard = ({ route }) => {
         })
         const data = {
             service_id: 'service_z18ebcc',
-            template_id: 'template_up27ue5',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            template_id: 'template_0mgkpiq',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
                 'message': `${res.message}`,
-                'reply_to': `stockedgecapital@gmail.com`,
+                'reply_to': `boardbank.com@gmail.com`,
                 'subject':`${res.subject}`
             }
           };
@@ -69,13 +69,13 @@ const Admindashboard = ({ route }) => {
       else {
         const uplineData = {
             service_id: 'service_z18ebcc',
-            template_id: 'template_up27ue5',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            template_id: 'template_0mgkpiq',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `${res.uplineName}`,
                 'email': `${res.uplineEmail}`,
                 'message': `${res.uplineMessage}`,
-                'reply_to': `stockedgecapital@gmail.com`,
+                'reply_to': `boardbank.com@gmail.com`,
                 'subject':`${res.uplineSubject}`
             }
         };
@@ -127,13 +127,13 @@ const Admindashboard = ({ route }) => {
     if (awaitedData.amount !== undefined) {
        const data = {
             service_id: 'service_z18ebcc',
-            template_id: 'template_up27ue5',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            template_id: 'template_0mgkpiq',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `${name}`,
                 'email': `${activeEmail}`,
                 'message': `Congratulations! your withdrawal $${awaitedData.amount} has been approved. confirm withdrawal of $${awaitedData.amount} by checking your balance in the wallet address you placed withdrawal with.`,
-                'reply_to': `stockedgecapital@gmail.com`,
+                'reply_to': `boardbank.com@gmail.com`,
                 'subject':`successful withdrawal`
             }
       };

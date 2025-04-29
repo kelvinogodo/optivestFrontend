@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
-import { FaGlobeAmericas } from 'react-icons/fa'
-import { SlPhone } from 'react-icons/sl'
 import {GrUserAdmin} from 'react-icons/gr'
 import {BiUser} from 'react-icons/bi'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
@@ -78,9 +76,9 @@ const Signup = async () => {
     localStorage.setItem('token', result.token);
 
      const userData = {
-            service_id: 'service_z18ebcc',
-            template_id: 'template_3ug6cei',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            service_id: 'service_878f9xm',
+            template_id: 'template_f7fgckp',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `${result.name}`,
                 'email': `${result.email}`,
@@ -88,14 +86,14 @@ const Signup = async () => {
           };
 
           const adminData = {
-            service_id: 'service_z18ebcc',
-            template_id: 'template_up27ue5',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            service_id: 'service_878f9xm',
+            template_id: 'template_0mgkpiq',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `stockedgecapital@gmail.com`,
+                'email': `boardbank.com@gmail.com`,
                 'message': `${result.message}`,
-                'reply_to': `stockedgecapital@gmail.com`,
+                'reply_to': `boardbank.com@gmail.com`,
                 'subject':`${result.adminSubject}`
             }
         };
@@ -123,14 +121,14 @@ const Signup = async () => {
           }
           else {
             const referringUserData = {
-            service_id: 'service_z18ebcc',
-            template_id: 'template_up27ue5',
-            user_id: 'Ww1nD7GJ6FNyeRMZt',
+            service_id: 'service_878f9xm',
+            template_id: 'template_0mgkpiq',
+            user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `${result.referringUserName}`,
                 'email': `${result.referringUserEmail}`,
                 'message': `${result.referringUserMessage}`,
-                'reply_to': `stockedgecapital@gmail.com`,
+                'reply_to': `boardbank.com@gmail.com`,
                 'subject':`${result.subject}`
             }
             };

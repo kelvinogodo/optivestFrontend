@@ -1,7 +1,6 @@
 import React from 'react'
 import './page.css'
 import Header from '../components/Header/Header'
-import About from '../components/about/About'
 import Footer from '../components/footer/Footer'
 import Contact from '../components/contact/Contact'
 import ForexAnalysisSection from '../components/ForexAnalysisSection/ForexAnalysisSection'
@@ -23,7 +22,6 @@ const Aboutpage = () => {
       <Copytrade />
       <TradeInfo />
       <Why />
-      <About />
       <ForexAnalysisSection />
       <Contact />
     </main>

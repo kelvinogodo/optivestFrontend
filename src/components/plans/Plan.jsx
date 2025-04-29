@@ -7,63 +7,43 @@ const Plan = () => {
     const [withdrawMethods,setWithdrawalMethods] = useState([
       {
         id:1,
-        min:'500',
-        max:'4,999',
+        min:'100',
+        max:'999',
         image:'/btc.png',
         method:'BTC',
-        type:'starter plan',
-        percent:'20',
-        duration:'2 day(s)'
+        type:'Peer plan',
+        percent:'2',
+        duration:'5 day(s)'
       },
       {
         id:2,
-        min:'5,000',
-        max:'19,999',
+        min:'1,000',
+        max:'4,999',
         image:'/bnb.png',
         method:'USDT',
-        type:'gold plan',
-        percent:'35',
-        duration:'4 day(s)'
+        type:'Rose Plan',
+        percent:'3',
+        duration:'5 day(s)'
       },
       {
         id:3,
-        min:'20,000',
-        max:'49,999',
+        min:'10,000',
+        max:'30,000',
         image:'/tron.png',
         method:'tether(TRC20)',
-        type:'premium plan',
-        percent:'50',
+        type:'Acorn Plan',
+        percent:'4',
         duration:'7 day(s)'
       },
       {
         id:4,
-        min:'50,000',
-        max:'99,000',
+        min:'30,000',
+        max:'60,000',
         image:'/tron.png',
         method:'tether(TRC20)',
-        type:'diamond plan',
-        percent:'65',
-        duration:'10 day(s)'
-      },
-      {
-        id:5,
-        min:'100,000',
-        max:'199,999',
-        image:'/tron.png',
-        method:'tether(TRC20)',
-        type:'VIP plan',
-        percent:'80',
-        duration:'12 day(s)'
-      },
-      {
-        id:6,
-        min:'200,000',
-        max:'5,000,000',
-        image:'/tron.png',
-        method:'tether(TRC20)',
-        type:'real estate plan',
-        percent:'100',
-        duration:'14 day(s)'
+        type:'Grant plan',
+        percent:'8',
+        duration:'15 day(s)'
       },
       ])
   return (

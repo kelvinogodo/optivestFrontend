@@ -26,7 +26,7 @@ const Home = () => {
       {/* <TeslaWidgetContainer /> */}
       <CryptoNewsContainer />
       <Faqcard />
-      <ForexAnalysisSection />
+      {/* <ForexAnalysisSection /> */}
       <Feature />
         {/* <Roadmap /> */}
         {/* <div className="crypto-chart-container" data-aos="fade-up">

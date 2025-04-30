@@ -276,7 +276,7 @@ nav ul li a {
             width: 19px;
             height: 19px;
             transition: all 0.3s ease-out;
-            color: rgb(106, 106, 106);
+            color: var(--color-variant);
         }
     
         .menu-card .list .element .label {
@@ -286,7 +286,7 @@ nav ul li a {
     
        
         .menu-card .list .element a{
-            color: white;
+            color: var(--color-variant);
         }
     
         .menu-card .list .element:active {

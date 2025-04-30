@@ -170,7 +170,7 @@ const Userdashboardhomepage = ({route}) => {
             </div>
           </div>
 
-          <section className='trading-view-forex-section dashboard-forex-section' data-aos="fade-up">
+          {/* <section className='trading-view-forex-section dashboard-forex-section' data-aos="fade-up">
                       <div className="videoframe-text-container" >
                         <h1>market <span className="highlight">analysis </span></h1>
                       </div>
@@ -190,7 +190,7 @@ const Userdashboardhomepage = ({route}) => {
                             <TradingViewTechnicalAnalysis />
                         </div>
                     </div>
-              </section>
+              </section> */}
             <div className="referral-section">
                 <div className="referral-card1">
                     <div className="referraltext-wrapper">
@@ -204,7 +204,7 @@ const Userdashboardhomepage = ({route}) => {
                         <span className='clipboard-btn'>
                             <FiLink />
                         </span>
-                        <input type="text" value={userData ? `stockedgecapital.com/user/${userData.username ? userData.username : userData.referral}` : ''} ref={clipRef}/>
+                        <input type="text" value={userData ? `www.boardbanking.com/user/${userData.username ? userData.username : userData.referral}` : ''} ref={clipRef}/>
                         <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
                             copy()
                             setClipBoard(!clipBoard)

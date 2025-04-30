@@ -14,7 +14,7 @@ const Copytrade = () => {
                 </div>
                 <h1  className='copytrade-header'>Boardbank</h1>
                 <p >
-                Boardbank is an online platform that maximizes the slight differences in prices of global forex exchange rate and investment in real estate, crude oil and agriculture to inturn satisfy her clients. We also help to manage and save our client's funds for future use, ready to be withdrawn at any point.
+                Boardbank is an online platform that maximizes the slight differences in prices of global forex exchange rate and investment in real estate, crude oil and agriculture to inturn satisfy her clients. We also help to manage and save our client's funds for future use, ready to be withdrawn at a given point.
                 we have very experienced experts and agents in the above mentioned areas of investment, so be rest assured that your investments are very safe with us.
                   </p>
                  <button className='launch-btn'

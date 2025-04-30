@@ -25,7 +25,7 @@ const Why = () => {
                 <span className="card-counter">02</span>
                 <IoWallet />
                 <h2>Make a deposit</h2>
-                <p>your investments are very much upgradeable at any point you want to. we provide our clients the ability to scale up their investments.</p>
+                <p>Make a deposit through your preferred deposit option, to kick-start your investment journey. We provide our clients the ability to scale up their investments.</p>
             </div>
             <div className="why-choose-us-card" data-aos="fade-up">
                 <span className="card-counter">03</span>

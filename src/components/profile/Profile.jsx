@@ -101,7 +101,7 @@ const Profile = ({ route }) => {
     <div>
       <Userdashboardheader route={route} />
       <div className="profile-page">
-        <div className="page-header">
+        <div className="page-header profile-page-header">
           <h2>Profile Settings</h2>
           <p>Choose an investment plan to start earning immediately</p>
         </div>

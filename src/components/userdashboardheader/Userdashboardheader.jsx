@@ -103,6 +103,12 @@ const Userdashboardheader = ({route}) => {
                 }}>
                     <RiLuggageDepositLine />
                     <p>withdraw</p>
+                          </div>
+                          <div className="dropdown-tabs" onClick={()=>{
+                    navigate('/tradingbot')
+                }}>
+                    <RiLockPasswordLine />
+                    <p>trading bot</p>
                 </div>
                 <div className="dropdown-tabs" onClick={()=>{
                     navigate('/referrals')
@@ -123,7 +129,6 @@ const Userdashboardheader = ({route}) => {
                     <RiLockPasswordLine />
                     <p>kyc</p>
                 </div>
-                
                 <div className="dropdown-tabs" onClick={()=>{
                    logout()
                 }}>

@@ -88,8 +88,7 @@
     top: 10px;
     padding: 0px 0px 10px 0px;
     width: 280px;
-    background-color: white;
-    box-shadow: 0px 3px 10px #ddd;
+    background-color: black;
     z-index: 10;
     border-radius: 5px;
     display: flex;
@@ -100,7 +99,7 @@
 .dropdown-header{
     width: 100%;
     padding: 15px 20px;
-    background-color: rgb(240, 240, 240);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,7 +111,7 @@
 }
 .dropdown-email{
     font-size: .8rem;
-    color: rgb(80, 80, 80);
+    color: rgb(170, 170, 170);
     text-align: left;
     word-break: break-all;
 }
@@ -120,7 +119,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--secondary-color);
+    background-color: var(--color-variant);
     color: white;
     text-transform: uppercase;
     display: flex;
@@ -129,7 +128,7 @@
     font-size: 1rem;
 }
 .dropdown-name{
-    color: var(--secondary-color);
+    color: var(--color-variant);
     font-size: 1rem;
     text-align: left;
     text-transform: uppercase;
@@ -138,11 +137,13 @@
     width: 100%;
     padding: 10px 20px;
     font-family: roboto;
+    background-color: black;
 }
 .dropdown-deposit-container h3{
     font-size: .9rem;
     text-align: left;
     font-family: roboto;
+    color: rgb(99, 99, 99);
 }
 .dropdown-deposit-container h2{
     font-size: 1.5rem;
@@ -150,7 +151,7 @@
     text-align: left;
     font-weight: 400;
     font-family: roboto;
-    color: rgba(17, 43, 209, 0.701);
+    color: var(--color-variant);
 }
 .dropdown-deposit-container p{
     font-size: .8rem;
@@ -168,19 +169,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    box-shadow: 0px 0px 1px #ddd;
     cursor: pointer;
+    background-color: black;
 }
 .dropdown-tabs p{
     width: 90%;
     font-size: .8rem;
-    color:rgb(99, 99, 99) ;
+    color:rgb(224, 224, 224) ;
     text-transform: capitalize;
     text-align: left;
 }
-.dropdown-tabssvg{
+.dropdown-tabs svg{
     font-size: 1rem;
-    color:rgba(17, 43, 209, 0.701);
+    color:rgba(214, 214, 214, 0.701);
 }
 .profile-pic-container img{
     height: 100%;
@@ -210,6 +211,7 @@
     left: 0;
     z-index: 4;
 }
+
 @media (max-width: 990px) and (min-width: 768px){
     .user-header-nav{
         display: none;

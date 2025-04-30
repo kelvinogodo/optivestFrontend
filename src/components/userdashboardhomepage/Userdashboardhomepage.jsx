@@ -131,7 +131,7 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>total profit</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2>  <small>$</small> { userData && userData.periodicProfit}</h2>
+                <h2>  <small>$</small> { userData && userData.totalprofit}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -142,7 +142,7 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>bonus earned</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2> <small>$</small> { userData && userData.refBonus}</h2>
+                <h2> <small>$</small> { userData && userData.periodicProfit}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -154,7 +154,7 @@ const Userdashboardhomepage = ({route}) => {
               </div>
               <div className="withdrawll-card-amount">
                
-                <h2> <small>$</small> { userData && userData.periodicProfit}</h2>
+                <h2> <small>$</small> { userData && userData.totaldeposit}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -165,32 +165,10 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>total withdrawal</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2> <small>$</small> { userData && userData.totaldeposit}</h2>
+                <h2> <small>$</small> { userData && userData.totalwithdraw}</h2>
               </div>
             </div>
           </div>
-
-          {/* <section className='trading-view-forex-section dashboard-forex-section' data-aos="fade-up">
-                      <div className="videoframe-text-container" >
-                        <h1>market <span className="highlight">analysis </span></h1>
-                      </div>
-                    <div className="trading-view-forex-wrapper dashboard-f-wrap">
-                        <div className="trading-view-card">
-                            <div className="trading-view-card-text-container" >
-                                <h1>Technical Analysis</h1>
-                                <p>See what the technical analysis says about a given symbol with our display ratings, made for easy viewing.</p>
-                            </div>
-                            <TeslaWidget />
-                        </div>
-                        <div className="trading-view-card">
-                            <div className="trading-view-card-text-container" >
-                                <h1>Fundamental Data</h1>
-                                <p>Kick the tires on the fundamentals with this deep dive into how a company is doing beyond simply its stock price.</p>
-                            </div>
-                            <TradingViewTechnicalAnalysis />
-                        </div>
-                    </div>
-              </section> */}
             <div className="referral-section">
                 <div className="referral-card1">
                     <div className="referraltext-wrapper">

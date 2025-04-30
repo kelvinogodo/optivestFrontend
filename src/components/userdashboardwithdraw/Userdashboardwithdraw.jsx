@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {MdClose} from 'react-icons/md'
 import Swal from 'sweetalert2';
 import WithdrawReview from '../WithdrawReview';
-import { Pagination, Navigation ,FreeMode} from "swiper";
+import { Pagination, Navigation} from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";

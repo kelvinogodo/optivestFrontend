@@ -82,8 +82,7 @@ const Deposit = ({route}) => {
         <Link to='/fundwallet'>deposit</Link>
       </div>
       </div>
-      }
-     
+    }
 </div>
   )
 }

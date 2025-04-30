@@ -244,7 +244,7 @@ nav ul li a {
             flex-direction: column;
             gap: 10px;
             height: 100vh;
-            background-color: white;
+            background-color: black;
             overflow: hidden;
         }
     
@@ -263,7 +263,7 @@ nav ul li a {
         .menu-card .list .element {
             display: flex;
             align-items: center;
-            color: #7e8590;
+            /* color: #7e8590; */
             gap: 20px;
             transition: all 0.3s ease-out;
             padding: 4px 7px;
@@ -276,6 +276,7 @@ nav ul li a {
             width: 19px;
             height: 19px;
             transition: all 0.3s ease-out;
+            color: rgb(106, 106, 106);
         }
     
         .menu-card .list .element .label {
@@ -283,16 +284,9 @@ nav ul li a {
             font-size: 1rem;
         }
     
-        .menu-card .list .element:hover {
-            background-color: var(--dark);
-            color: #ffffff;
-            transform: translate(1px, -1px);
-        }
-        .menu-card .list .element:hover a{
+       
+        .menu-card .list .element a{
             color: white;
-        }
-        .menu-card .list .delete:hover {
-            background-color: var(--dark);
         }
     
         .menu-card .list .element:active {
@@ -302,9 +296,6 @@ nav ul li a {
         .menu-card .list:not(:last-child) .element:hover svg {
             stroke: #ffffff;
         }
-    
-        .menu-card .list:last-child .element {
-            color: #7e8590;
-        }
+
     
 }

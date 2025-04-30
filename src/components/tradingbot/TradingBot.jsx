@@ -1,8 +1,6 @@
 import React from 'react'
 import Userdashboardheader from '../userdashboardheader/Userdashboardheader'
-import {FiArrowRight} from 'react-icons/fi'
-import { motion,AnimatePresence } from 'framer-motion'
-import {MdClose} from 'react-icons/md'
+import {AiOutlineArrowLeft} from 'react-icons/ai'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaRobot } from "react-icons/fa";
@@ -78,7 +76,8 @@ const TradingBot = ({ route }) => {
     {main &&
       <div>
         <Userdashboardheader route={route}/>
-        <div className="page-swiper-wrapper">
+          <div className="page-swiper-wrapper">
+            
             <div className="page-header">
                 <h3>Purchase Third-Party Trading Bot</h3>
                 <h2>Trading Bot</h2>
@@ -138,7 +137,13 @@ const TradingBot = ({ route }) => {
         showModal &&
         <>
           <Userdashboardheader route={route}/>
-           <div className="page-swiper-wrapper">
+          <div className="page-swiper-wrapper">
+            <div className="floating-btn" onClick={()=>{
+              updateMain()
+              setShowModal(false)
+                }}>
+                    <AiOutlineArrowLeft />
+                </div>
               <div className="page-header">
                   <h3>Choose a Payment Option</h3>
                   <h2>purchase Methods</h2>

@@ -160,7 +160,7 @@ const Userdashboardheader = ({route}) => {
                         <Link to='/referrals'>referrals</Link>
                     </li>
                     <li>
-                        <Link to='/myprofile'>kyc</Link>
+                        <Link to='/tradingbot'>trading bot</Link>
                     </li>
                     {
                         userData && userData.promo ? 

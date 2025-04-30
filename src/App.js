@@ -25,6 +25,7 @@ import Checkout from './components/Checkout';
 import Admindashboard from './components/admindashboard/Admindashboard';
 import Deposit from './components/deposit/Deposit';
 import Aboutpage from './pages/Aboutpage';
+import TradingBot from './components/tradingbot/TradingBot';
 import Faq from './pages/Faq';
 import Buybitcoin from './pages/Buybitcoin';
 import Policy from './pages/Policy';
@@ -153,6 +154,7 @@ function App() {
             <Route path='/agrotech' element={<AgroTechPage />}/>
             <Route path='/realestate' element={<RealEsatePage />}/>
             <Route path='/services' element={<Service />}/>
+              <Route path='/tradingbot' element={<TradingBot route={ route} />}/>
           </Routes>
         </motion.div>
       </Router>

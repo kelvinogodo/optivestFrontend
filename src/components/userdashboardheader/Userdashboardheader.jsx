@@ -5,7 +5,8 @@ import {BiUser,BiChevronDown} from 'react-icons/bi'
 import {RiLuggageDepositLine} from 'react-icons/ri'
 import {AiOutlineSetting,AiOutlineStock} from 'react-icons/ai'
 import {RiLockPasswordLine} from 'react-icons/ri'
-import {FiLogOut} from 'react-icons/fi'
+import { FiLogOut } from 'react-icons/fi'
+import { FaRobot } from "react-icons/fa";
 import {AiOutlineClose} from 'react-icons/ai'
 import {GiReceiveMoney} from 'react-icons/gi'
 import {RxDashboard} from 'react-icons/rx'
@@ -96,7 +97,7 @@ const Userdashboardheader = ({route}) => {
                     navigate('/plans')
                 }}>
                     <AiOutlineStock />
-                    <p>select plan</p>
+                    <p>invest</p>
                 </div>
                 <div className="dropdown-tabs" onClick={()=>{
                     navigate('/withdraw')
@@ -107,7 +108,7 @@ const Userdashboardheader = ({route}) => {
                           <div className="dropdown-tabs" onClick={()=>{
                     navigate('/tradingbot')
                 }}>
-                    <RiLockPasswordLine />
+                    <FaRobot />
                     <p>trading bot</p>
                 </div>
                 <div className="dropdown-tabs" onClick={()=>{

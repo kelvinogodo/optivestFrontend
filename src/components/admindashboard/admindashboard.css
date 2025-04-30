@@ -201,14 +201,18 @@ tbody{
 }
 .dash-b {
     min-height: fit-content;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding-bottom:40px ;
+}
+.transaction-container table {
+    overflow-x: scroll;
+    width: 100%;
 }
 @media screen  and (max-width:740px){
     .dash-b {
             min-height: 80vh;
-            width: 90%;
+            width: 100%;
             margin: auto;
         }
     .credit-form{

@@ -15,7 +15,8 @@ const Deposit = ({amount,active,close,route}) => {
     const [showImage,setShowImage] = useState()
     const clipRef = useRef(null)
     const [modal,setModal] = useState(false)
-    const [loader,setLoader] = useState(false)
+    const [loader, setLoader] = useState(false)
+    const [transactionId, setTransactionId] = useState()
 
     // copy to clipboard function starts here 
     const copy = ()=>{
@@ -68,7 +69,8 @@ const Deposit = ({amount,active,close,route}) => {
             body:JSON.stringify({
                 amount:amount,
                 method: Active.method,
-                proof:showImage
+                proof: showImage,
+                transactionId:transactionId
             })
         })
         const res = await req.json()
@@ -171,7 +173,8 @@ const Deposit = ({amount,active,close,route}) => {
                             <MdOutlineDone /> : <MdOutlineContentCopy />
                         }
                     </span>
-                </div>
+                  </div>
+                  <input type="text" name="" placeholder='Input Transaction Id' onChange={(e)=> setTransactionId(e.target.value)} className='transId-input' />
                 <div className="proof-container">
                     <form action="" className='proof-form' onSubmit={(e)=>{
                         e.preventDefault()

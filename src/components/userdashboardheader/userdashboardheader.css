@@ -233,7 +233,7 @@
         height: 100vh;
     }
     .userdashboard-logo-container{
-        width: 60%;
+        width: 80%;
         display: flex;
         align-items: center;
         height: 100%;
@@ -242,7 +242,7 @@
     }
     .userdashboard-logo-container img{
         object-fit: cover;
-        width: 60%;
+        width: 70%;
         height: 100%;
     }
 }

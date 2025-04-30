@@ -70,7 +70,7 @@ const Userdashboardheader = ({route}) => {
                     </span>
                     <span className="dropdown-user-details">
                         <p className='dropdown-name'>{userData ? userData.firstname : 'john doe'}</p>
-                        <p className='dropdown-email'>{userData ? userData.email : 'kelvinchukwuebuka385#gmail.com'}</p>
+                        <p className='dropdown-email'>{userData ? userData.email : 'johndoe@gmail.com'}</p>
                     </span>
                 </div>
                 
@@ -135,7 +135,7 @@ const Userdashboardheader = ({route}) => {
         }
         <div  className={`userdashboard-header ${bgColor && 'scroll-head'}`}>
             <div className="userdashboard-logo-container">
-                <img src="/stockedgelogo3.png" alt="" className='logo' onClick={()=>{
+                <img src="/boardbanklogo1.png" alt="" className='logo' onClick={()=>{
                     navigate('/')
                 }}/>
             </div>

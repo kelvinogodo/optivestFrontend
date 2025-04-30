@@ -55,55 +55,7 @@ function App() {
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
     })
-    const myArray = [
-      {
-        country: 'pakistan',
-        amount:'$1000'
-      },
-      {
-        country: 'Australia',
-        amount:'$5700'
-      },
-      {
-        country: 'USA',
-        amount:'$10000'
-      },
-      {
-        country: 'Kuwait',
-        amount:'$720'
-      },
-      {
-        country: 'Norway',
-        amount:'$3200'
-      },
-      {
-        country: 'Brazil',
-        amount:'$8500'
-      },
-      {
-        country: 'Russia',
-        amount:'$12000'
-      },
-      {
-        country: 'Greece',
-        amount:'$100'
-      },
-      {
-        country: 'France',
-        amount:'$78000'
-      },
-      {
-        country: 'Ghana',
-        amount:'$15000'
-      },
-    ]
-    const num = myArray.length-1
-    setInterval(() => {
-      Toast.fire({
-              icon: 'success',
-              title: `An Investor from ${myArray[Math.floor(Math.random() * num)].country} just withdrew ${myArray[Math.floor(Math.random() * num)].amount}...`
-            })
-    }, 60000);
+
     const route = 'https://optivest-backend.vercel.app'
     // const route = 'http://localhost:5000'
   

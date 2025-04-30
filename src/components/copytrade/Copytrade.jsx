@@ -31,7 +31,7 @@ const Copytrade = () => {
 
         </div>
         <div className="about-img-container" data-aos="fade-up">
-            <img src="/apexmockup19.png" className='forex-img '/>
+            <img src="/boardbankmockup2.png" className='forex-img '/>
             </div>
         </div>
     </div>

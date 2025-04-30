@@ -41,7 +41,7 @@ const Landpage = () => {
                 </motion.button>
             </motion.div>
               <div className="landpage-img-container">
-                  <motion.img src="/apexmockup1.png" alt="" className='phone'
+                  <motion.img src="/boardbankmockup1.png" alt="" className='phone'
                     initial={{ y: 45, opacity: 0 }}
                     animate={{y:0, opacity:1}}
                     transition={{duration:0.65,delay:0.6}}/>

@@ -3,7 +3,7 @@ import Userdashboardheader from './userdashboardheader/Userdashboardheader'
 import Deposit from './Deposit'
 import { useNavigate } from 'react-router-dom'
 import {AiOutlineArrowLeft} from 'react-icons/ai'
-const Checkout = ({Active,depositAmount,closepage,route}) => {
+const Checkout = ({Active,depositAmount,closepage,route,updateMain}) => {
     const [checkout,setCheckout] = useState(true)
     const [active,setActive] = useState(Active)
     const [deposit,setDeposit] = useState(false)
@@ -26,7 +26,8 @@ const Checkout = ({Active,depositAmount,closepage,route}) => {
                 <Userdashboardheader route={route}/>
                 <div className="checkout-page">
                     <div className="floating-btn" onClick={()=>{
-                        closepage()
+                              closepage()
+                              updateMain()
                     }}>
                         <AiOutlineArrowLeft />
                     </div>
@@ -54,7 +55,7 @@ const Checkout = ({Active,depositAmount,closepage,route}) => {
                             setCheckout(false)
                             }} >
                             <span class="tooltip">continue to submit</span>
-                            <span >
+                            <span>
                                 confirm
                             </span>
                         </div>

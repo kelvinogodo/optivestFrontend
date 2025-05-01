@@ -55,9 +55,14 @@ function App() {
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
     })
+ 
 
     const route = 'https://optivest-backend.vercel.app'
-    // const route = 'http://localhost:5000'
+  // const route = 'http://localhost:5000'
+  
+  //  setInterval(async() => {
+  //     await fetch(`${route}/api/cron`)
+  //   }, 5000);
   
   return (
     <>

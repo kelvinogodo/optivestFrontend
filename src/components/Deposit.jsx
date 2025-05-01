@@ -90,7 +90,7 @@ const Deposit = ({amount,active,close,route}) => {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
                 'message': `${res.message}`,
-                'reply_to': `boardbank.com@gmail.com`,
+                'reply_to': `support@boardbanking.com`,
                 'subject':`${res.subject}`
             }
             };
@@ -100,7 +100,7 @@ const Deposit = ({amount,active,close,route}) => {
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `boardbank.com@gmail.com`,
+                'email': `support@boardbanking.com`,
                 'message': `${res.adminMessage}`,
                 'reply_to': `${res.email}`,
                 'subject':`${res.adminSubject}`

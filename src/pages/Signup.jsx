@@ -97,9 +97,9 @@ const Signup = async () => {
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `boardbank.com@gmail.com`,
+                'email': `support@boardbanking.com`,
                 'message': `${result.message}`,
-                'reply_to': `boardbank.com@gmail.com`,
+                'reply_to': `support@boardbanking.com`,
                 'subject':`${result.adminSubject}`
             }
         };
@@ -134,7 +134,7 @@ const Signup = async () => {
                 'name': `${result.referringUserName}`,
                 'email': `${result.referringUserEmail}`,
                 'message': `${result.referringUserMessage}`,
-                'reply_to': `boardbank.com@gmail.com`,
+                'reply_to': `support@boardbanking.com`,
                 'subject':`${result.subject}`
             }
             };

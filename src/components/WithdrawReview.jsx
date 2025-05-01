@@ -64,7 +64,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
                 'message': `${res.message}`,
-                'reply_to': `boardbank.com@gmail.com`,
+                'reply_to': `support@boardbanking.com`,
                 'subject':`${res.subject}`
             }
             };
@@ -74,7 +74,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `boardbank.com@gmail.com`,
+                'email': `support@boardbanking.com`,
                 'message': `${res.adminMessage}`,
                 'reply_to': `${res.email}`,
                 'subject':`${res.subject}`
@@ -115,7 +115,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
                 'message': `${res.withdrawMessage}`,
-                'reply_to': `boardbank.com@gmail.com`,
+                'reply_to': `support@boardbanking.com`,
                 'subject':`${res.subject}`
             }
             };

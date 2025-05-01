@@ -22,6 +22,7 @@ const Userdashboardfundaccount = ({route}) => {
   const [checkoutPage,setCheckoutPage] = useState(false)
   const [showModal,setShowModal] =useState(false)
   const [activeMethod, setActiveMethod] = useState()
+  
   const [withdrawMethods,setWithdrawalMethods] = useState([
     {
       id:1,
@@ -65,7 +66,9 @@ const Userdashboardfundaccount = ({route}) => {
   const close = ()=>{
     setCheckoutPage(false)
   }
-  
+  const updateMain = () => {
+    
+  }
   return (
     <>
     {!checkoutPage &&
@@ -227,7 +230,7 @@ const Userdashboardfundaccount = ({route}) => {
     </div>}
     {
         checkoutPage &&
-        <Checkout Active={activeMethod} depositAmount={depositAmount} closepage={close} route={route}/>
+        <Checkout Active={activeMethod} depositAmount={depositAmount} closepage={close} route={route} updateMain={ updateMain}/>
     }
     </> 
   )

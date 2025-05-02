@@ -7,8 +7,8 @@ const Plan = () => {
     const [withdrawMethods,setWithdrawalMethods] = useState([
       {
         id:1,
-        min:'100',
-        max:'999',
+        min:'50',
+        max:'499',
         image:'/btc.png',
         type:'Orchid plan',
         percent:'5',
@@ -16,48 +16,48 @@ const Plan = () => {
       },
       {
         id:2,
-        min:'1,000',
-        max:'4,999',
+        min:'500',
+        max:'49,999',
         image:'/bnb.png',
-        type:'Rose Plan',
+        type:'Tulip Plan',
         percent:'6',
         duration:'7 day(s)'
       },
       {
         id:3,
-        min:'10,000',
-        max:'30,000',
+        min:'1,000',
+        max:'29,999',
         image:'/tron.png',
-        type:'Acorn Plan',
+        type:'Standard Plan',
         percent:'10',
         duration:'30 day(s)'
       },
       {
         id:4,
         min:'30,000',
-        max:'60,000',
+        max:'59,999',
         image:'/tron.png',
-        type:'Grant plan',
+        type:'Delux plan',
         percent:'12',
-        duration:' d30ay(s)'
+        duration:' 30 day(s)'
       },
       {
         id:5,
-        min:'30,000',
-        max:'60,000',
+        min:'60,000',
+        max:'80,000',
         image:'/tron.png',
-        type:'Grant plan',
-        percent:'12',
-        duration:' d30ay(s)'
+        type:'Pearl plan',
+        percent:'15',
+        duration:' 30 day(s)'
       },
       {
         id:6,
-        min:'30,000',
-        max:'60,000',
+        min:'80,001',
+        max:'100,000',
         image:'/tron.png',
-        type:'Grant plan',
+        type:'Diamond plan',
         percent:'12',
-        duration:' d30ay(s)'
+        duration:' 30 day(s)'
       },
       ])
   return (

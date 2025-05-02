@@ -10,40 +10,54 @@ const Plan = () => {
         min:'100',
         max:'999',
         image:'/btc.png',
-        method:'BTC',
-        type:'Peer plan',
-        percent:'2',
-        duration:'5 day(s)'
+        type:'Orchid plan',
+        percent:'5',
+        duration:'7 day(s)'
       },
       {
         id:2,
         min:'1,000',
         max:'4,999',
         image:'/bnb.png',
-        method:'USDT',
         type:'Rose Plan',
-        percent:'3',
-        duration:'5 day(s)'
+        percent:'6',
+        duration:'7 day(s)'
       },
       {
         id:3,
         min:'10,000',
         max:'30,000',
         image:'/tron.png',
-        method:'tether(TRC20)',
         type:'Acorn Plan',
-        percent:'4',
-        duration:'7 day(s)'
+        percent:'10',
+        duration:'30 day(s)'
       },
       {
         id:4,
         min:'30,000',
         max:'60,000',
         image:'/tron.png',
-        method:'tether(TRC20)',
         type:'Grant plan',
-        percent:'8',
-        duration:'15 day(s)'
+        percent:'12',
+        duration:' d30ay(s)'
+      },
+      {
+        id:5,
+        min:'30,000',
+        max:'60,000',
+        image:'/tron.png',
+        type:'Grant plan',
+        percent:'12',
+        duration:' d30ay(s)'
+      },
+      {
+        id:6,
+        min:'30,000',
+        max:'60,000',
+        image:'/tron.png',
+        type:'Grant plan',
+        percent:'12',
+        duration:' d30ay(s)'
       },
       ])
   return (

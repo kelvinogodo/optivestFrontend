@@ -115,23 +115,24 @@ const Login = ({route}) => {
 };
 
   return (
-    <main className='login-page'>
+    <main className='signup-page'>
+    
         {/* <Header /> */}
         {
         loader && 
           <Loader />
       }
       <div className="login-wrapper">
-          <form class="form_container"  onSubmit={(e)=>{
+          <form class="form"  onSubmit={(e)=>{
                     e.preventDefault()
                     login()
                     }}>
-          <div class="logo_container" onClick={()=>navigate('/')}>
-            <img src="/boardbanklogo6.png" alt="" />
-          </div>
+          <img src="/boardbanklogo6.png" alt="" className="login-logo" onClick={() => {
+            navigate('/')
+          }} />
           <div class="title_container">
             <p class="titles">Login to your Account</p>
-            <span class="subtitle">Welcome to Boardbank, login and enjoy the best investment experience.</span>
+            <span class="subtitle">Welcome to apexcopytrade, login and enjoy the best investment experience.</span>
           </div>
           <br/>
           <div class="input_containers">
@@ -175,15 +176,14 @@ const Login = ({route}) => {
                   </div>
                   <button type='submit'>login</button>
           <div class="separator">
-            <hr class="line" />
-            <span>Or</span>
-            <hr class="line" />   
+            <span>Don't have an account?</span>
           </div>
           <Link to="/signup" className="note">create account</Link>
           <Link class="note" to='/policy'>Terms of use &amp; Conditions</Link>
         </form>
         </div>       
-    </main>
+ </main>
+  
   )
 }
 

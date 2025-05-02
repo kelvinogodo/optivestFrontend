@@ -56,7 +56,7 @@ const Plan = () => {
         max:'100,000',
         image:'/tron.png',
         type:'Diamond plan',
-        percent:'12',
+        percent:'20',
         duration:' 30 day(s)'
       },
       ])

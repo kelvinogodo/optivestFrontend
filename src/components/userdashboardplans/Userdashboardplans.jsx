@@ -29,43 +29,61 @@ const Userdashboardplans = ({route}) => {
   const [withdrawMethods,setWithdrawalMethods] = useState([
     {
         id:1,
-        min:100,
-        max:999,
+        min:50,
+        max:499,
         image:'/btc.png',
         method:'BTC',
-        type:'peer plan',
-        percent:'2%',
-        duration:'5 days'
+        type:'Orchid plan',
+        percent:'5%',
+        duration:'7 days'
       },
       {
         id:2,
-        min:1000,
-        max:4999,
+        min:500,
+        max:999,
         image:'/bnb.png',
         method:'USDT',
-        type:'Rose Plan',
-        percent:'3%',
-        duration:'5 days'
+        type:'Tulip Plan',
+        percent:'6%',
+        duration:'7 days'
       },
       {
         id:3,
-        min:10000,
-        max:30000,
+        min:1000,
+        max:29999,
         image:'/tron.png',
         method:'tether(TRC20)',
-        type:'Acorn Plan',
-        percent:'4%',
-        duration:'7 days'
+        type:'Standard Plan',
+        percent:'10%',
+        duration:'30 days'
       },
       {
         id:4,
         min:30000,
-        max:60000,
+        max:59999,
         image:'/tron.png',
         method:'tether(TRC20)',
-        type:'Grant plan',
-        percent:'8%',
-        duration:'15 days'
+        type:'Delux plan',
+        percent:'12%',
+        duration:'30 days'
+    },
+      {
+        id:5,
+        min:60000,
+        max:80000,
+        image:'/tron.png',
+        type:'Pearl plan',
+        percent:'15%',
+        duration:' 30 day(s)'
+      },
+      {
+        id:6,
+        min:80001,
+        max:100000,
+        image:'/tron.png',
+        type:'Diamond plan',
+        percent:'20%',
+        duration:' 30 day(s)'
       },
   ])
   

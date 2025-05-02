@@ -17,7 +17,7 @@ const Plan = () => {
       {
         id:2,
         min:'500',
-        max:'49,999',
+        max:'999',
         image:'/bnb.png',
         type:'Tulip Plan',
         percent:'6',

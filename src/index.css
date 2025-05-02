@@ -951,6 +951,9 @@ button {
 .signup-page {
   padding: 0px;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-form-container {

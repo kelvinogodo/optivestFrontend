@@ -87,7 +87,7 @@ const TradingBot = ({ route }) => {
                   <div class="inner">
                     <span class="pricing">
                       <span>
-                        $800 <small>/ yr</small>
+                        $800 <small>/6 months</small>
                       </span>
                     </span>
                     <p class="ttitle">Tradebot</p>

@@ -1,6 +1,7 @@
 .homewrapper {
     width: 100%;
     background-color: var(--primary-color);
+    min-height: 100vh;
 }
 .dashboard-forex-section{
     width: 100%;

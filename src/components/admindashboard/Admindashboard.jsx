@@ -457,7 +457,7 @@ const Admindashboard = ({ route }) => {
               <p>we keep track of all users info</p>
             </div>
             {users && users.length !== 0 ? 
-            <div className="transaction-container no-ref dash-b">
+            <div className="dash-b">
               <table>
                   <thead>
                     <tr>

@@ -81,8 +81,8 @@ const Userdashboardhomepage = ({route}) => {
             <div className="welcome-kyc-section">
                 <p>wallet Balance</p>
                 <div className="username-container">
-              <h2>${userData ? userData.funded : ''}.00 USD</h2>
-              <small className='profit'>${userData ? userData.periodicProfit : ''}.00 USD profit earned</small>
+              <h2>${userData ? Math.ceil(userData.funded) : ''}.00 USD</h2>
+              {/* <small className='profit'>${userData ? userData.periodicProfit : ''}.00 USD profit earned</small> */}
                 </div>
             </div>
                   <div className="dash-btn-container">
@@ -131,7 +131,7 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>total profit</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2>  <small>$</small> { userData && userData.totalprofit}</h2>
+                <h2>  <small>$</small> { userData && Math.ceil(userData.totalprofit)}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -142,7 +142,7 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>bonus earned</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2> <small>$</small> { userData && userData.periodicProfit}</h2>
+                <h2> <small>$</small> { userData && Math.ceil(userData.periodicProfit)}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -154,7 +154,7 @@ const Userdashboardhomepage = ({route}) => {
               </div>
               <div className="withdrawll-card-amount">
                
-                <h2> <small>$</small> { userData && userData.totaldeposit}</h2>
+                <h2> <small>$</small> { userData && Math.ceil(userData.totaldeposit)}</h2>
               </div>
             </div>
             <div class="withdrawll-card">
@@ -165,7 +165,7 @@ const Userdashboardhomepage = ({route}) => {
                 <h2>total withdrawal</h2>
               </div>
               <div className="withdrawll-card-amount">
-                <h2> <small>$</small> { userData && userData.totalwithdraw}</h2>
+                <h2> <small>$</small> { userData && Math.ceil(userData.totalwithdraw)}</h2>
               </div>
             </div>
           </div>

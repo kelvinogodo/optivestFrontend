@@ -8,7 +8,8 @@ import {AiOutlineArrowLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Loader'
-import {MdClose} from 'react-icons/md'
+import { MdClose } from 'react-icons/md'
+import AdminHeader from '../AdminHeader'
 const Admindashboard = ({ route }) => {
   
    // sweet alert function 
@@ -179,7 +180,52 @@ const Admindashboard = ({ route }) => {
   const [email,setEmail] = useState()
   const [password,setPassword] = useState()
   const [userAmount, setUserAmount] = useState()
-  const [showModal,setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+
+  const [showCreateTrader,setShowCreateTrader] = useState(false)
+  const [showTraderLogs, setShowTraderLogs] = useState(false)
+  const [showUsers, setShowUsers] = useState(true)
+  const [wallets, setWallets] = useState()
+  const [newPassword, setNewPassword] = useState()
+
+  const changePassword = async () => {
+    // setLoader(true)
+    console.log(newPassword)
+    const req = await fetch(`${route}/api/updateAdminPassword`, {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ newPassword: newPassword }),
+    })
+
+    const res = await req.json()
+    if (res.status === 'ok') {
+      setLoader(false)
+      Toast.fire({
+        icon: 'success',
+        title: `password successfully updated`
+      })
+    }
+  }
+  
+    const openCreateTrader = () => {
+    setShowCreateTrader(true)
+    setShowTraderLogs(false)
+    setShowUsers(false)
+  }
+  const openTraderLogs = () => {
+    setShowTraderLogs(true)
+    setShowUsers(false)
+    setShowCreateTrader(false)
+  }
+
+  const openUsers = () => {
+    setShowCreateTrader(false)
+    setShowTraderLogs(false)
+    setShowUsers(true)
+  }
+
   const fetchUsers = async ()=>{
     const req = await fetch(`${route}/api/getUsers`,{
       headers:{
@@ -195,10 +241,21 @@ const Admindashboard = ({ route }) => {
       setUsers([])
     }
   }
+
+  const fetchWallets = async () => {
+    setLoader(true)
+    const req = await fetch(`${route}/api/fetchWallets`)
+    const res = await req.json()
+    if (res.status === 200) {
+      setLoader(false)
+      setWallets(res.wallets)
+    }
+  }
   
   useEffect(()=>{
     setLoader(true)  
-      fetchUsers()
+    fetchUsers()
+    fetchWallets()
   },[])
 
   const upgradeUser = async () => {
@@ -446,97 +503,126 @@ const Admindashboard = ({ route }) => {
             </div>
             </motion.div>
         }
-              <div className="floating-btn" onClick={()=>{
-                navigate('/')
+            {showUsers &&
+              <>
+              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />
+                <div className="floating-btn" onClick={() => {
+                  navigate('/')
                 }}>
-                <AiOutlineArrowLeft />
-              </div>
-            <div className="page-header admin-page-header">
-              <h3>checkout your list of signed in users</h3>
-              <h2>Users logs</h2>
-              <p>we keep track of all users info</p>
-            </div>
-            {users && users.length !== 0 ? 
-            <div className="dash-b">
-              <table>
-                  <thead>
-                    <tr>
-                    <td>firstname</td>
-                    <td>lastname</td>
-                    <td>email</td>
-                    <td>username</td>
-                    <td>deposit</td>
-                    <td>password</td>
-                    <td>credit</td>
-                    <td>upgrade</td>
-                    <td>tradebot</td>
-                    <td>delete</td>
-                    <td>approve withdraw</td>
-                    <td>mail to</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {
-                    users.map(refer =>
-                      <tr key={refer.email}>
-                        <td>{refer.firstname}</td>
-                        <td>{refer.lastname}</td>
-                        <td>{refer.email}</td>
-                        <td>{refer.username}</td>
-                        <td>${refer.funded} USD</td>
-                        <td>{refer.password}</td>
-                        <td>
-                          <span onClick={() => {
-                          setShowModal(true)
-                          setEmail(refer.email)
-                        }} className='promo-btn'>credit</span>
-                        </td>
-                        <td>
-                          <span onClick={()=>{
-                            setShowUpgradeModal(true)
-                            setActiveEmail(refer.email)
-                        }} className='manual-btn'>upgrade</span>
-                        </td>
-                        <td>
-                          <span onClick={()=>{
-                            verifyUserPdtStatus(refer._id)
-                          }} className='manual-btn pdt-btn'>{refer.tradebotstatus ? 'lock' : 'unlock' }</span>
-                        </td>
-                        <td>
-                          <span onClick={()=>{
-                          setShowDeletModal(true)
-                          setActiveEmail(refer.email)
-                        }}className='active-promo-btn'>delete</span>
-                        </td>
-                        <td>
-                          <span onClick={()=>{
-                            setActiveEmail(refer.email)
-                            setName(refer.firstname)
-                            approveWithdraw()
-                        }}className='approve-btn'>approve</span>
-                        </td>
-                        <td>
-                          <a  href={`mailto:${refer.email}`} className='mail-btn'>email</a>
-                        </td>
-                      </tr>
-                    )
-                  }
-                </tbody>
-              </table>
-              </div>
-          :
-          <div className="page-swiper-wrapper">
-          <div className="failure-page no-referral-page">
-            <img src="/preview.gif" alt="" className='failure-img'/>
-            <p>no registered user yet</p>
-            <Link to='/'>home</Link>
-          </div>
-          </div>
+                  <AiOutlineArrowLeft />
+                </div>
+                <div className="page-header admin-page-header">
+                  <h3>checkout your list of signed in users</h3>
+                  <h2>Users logs</h2>
+                  <p>we keep track of all users info</p>
+                </div>
+                {users && users.length !== 0 ?
+                  <div className="dash-b">
+                    <table>
+                      <thead>
+                        <tr>
+                          <td>firstname</td>
+                          <td>lastname</td>
+                          <td>email</td>
+                          <td>username</td>
+                          <td>deposit</td>
+                          <td>password</td>
+                          <td>credit</td>
+                          <td>upgrade</td>
+                          <td>tradebot</td>
+                          <td>delete</td>
+                          <td>approve withdraw</td>
+                          <td>mail to</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {
+                          users.map(refer =>
+                            <tr key={refer.email}>
+                              <td>{refer.firstname}</td>
+                              <td>{refer.lastname}</td>
+                              <td>{refer.email}</td>
+                              <td>{refer.username}</td>
+                              <td>${refer.funded} USD</td>
+                              <td>{refer.password}</td>
+                              <td>
+                                <span onClick={() => {
+                                  setShowModal(true)
+                                  setEmail(refer.email)
+                                }} className='promo-btn'>credit</span>
+                              </td>
+                              <td>
+                                <span onClick={() => {
+                                  setShowUpgradeModal(true)
+                                  setActiveEmail(refer.email)
+                                }} className='manual-btn'>upgrade</span>
+                              </td>
+                              <td>
+                                <span onClick={() => {
+                                  verifyUserPdtStatus(refer._id)
+                                }} className='manual-btn pdt-btn'>{refer.tradebotstatus ? 'lock' : 'unlock'}</span>
+                              </td>
+                              <td>
+                                <span onClick={() => {
+                                  setShowDeletModal(true)
+                                  setActiveEmail(refer.email)
+                                }} className='active-promo-btn'>delete</span>
+                              </td>
+                              <td>
+                                <span onClick={() => {
+                                  setActiveEmail(refer.email)
+                                  setName(refer.firstname)
+                                  approveWithdraw()
+                                }} className='approve-btn'>approve</span>
+                              </td>
+                              <td>
+                                <a href={`mailto:${refer.email}`} className='mail-btn'>email</a>
+                              </td>
+                            </tr>
+                          )
+                        }
+                      </tbody>
+                    </table>
+                  </div>
+                  :
+                  <div className="page-swiper-wrapper">
+                    <div className="failure-page no-referral-page">
+                      <img src="/preview.gif" alt="" className='failure-img' />
+                      <p>no registered user yet</p>
+                      <Link to='/'>home</Link>
+                    </div>
+                  </div>
+              
           }
+          </>
+          }
+            {
+              showTraderLogs &&
+              <>
+                <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />
+                  
+              </>
+            }
+
+            {showCreateTrader &&
+              <>
+              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />
+                  <div className="update-password-section">
+                    <div class="change-password-card">
+                        <span class="card__title">  Enter New Password</span>
+                        <p class="card__content">Input Your New Password
+                        </p>
+                        <div class="card__form">
+                            <input placeholder="New Password" type="text" onChange={(e)=>{setNewPassword(e.target.value)}} />
+                            <button class="sign-up" onClick={()=>changePassword()}>update</button>
+                        </div>
+                    </div>
+                </div>
+              </>
+            }  
           </main>
-        }
-          
-        </main>
+        } 
+    </main>
   )
 }
 

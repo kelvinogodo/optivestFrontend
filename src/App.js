@@ -57,9 +57,8 @@ function App() {
     })
  
 
-  const route = 'https://optivest-backend.vercel.app'
-  // const route = 'http://localhost:5000'
-  
+  // const route = 'https://optivest-backend.vercel.app'
+  const route = 'http://localhost:5000'
   
   return (
     <>

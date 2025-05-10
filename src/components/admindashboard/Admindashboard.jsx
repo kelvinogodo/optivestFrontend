@@ -187,8 +187,10 @@ const Admindashboard = ({ route }) => {
   const [showUsers, setShowUsers] = useState(true)
   const [wallets, setWallets] = useState()
   const [newPassword, setNewPassword] = useState()
-  const [activeWallet, setActiveWallet] = useState({})
+  const [activeWallet, setActiveWallet] = useState()
   const [showActiveForm, setShowActiveWalletForm] = useState(false)
+  const [newWallet, setNewWallet] = useState()
+  const [newNetwork, setNewNetwork] = useState()
 
   const changePassword = async () => {
     // setLoader(true)
@@ -253,6 +255,28 @@ const Admindashboard = ({ route }) => {
       setWallets(res.wallets)
     }
   }
+
+  const updateWallet = async () => {
+    setLoader(true)
+    const req = await fetch(`${route}/api/updateWallet`, {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ address: newWallet,type: activeWallet.type,network: newNetwork }),
+    })
+    const res = await req.json()
+    if (res.status === 'ok') {
+      setLoader(false)
+      Toast.fire({
+        icon: 'success',
+        title: `wallet successfully updated`
+      })
+      fetchWallets()
+    }
+  }
+
+
   
   useEffect(()=>{
     setLoader(true)  
@@ -435,40 +459,7 @@ const Admindashboard = ({ route }) => {
                   </div> 
                 </motion.div>
             }
-            {
-              showUpgradeModal && 
-               <motion.div >
-                  <div className="modal-container">
-                  <div className="modal">
-                    <div className="modal-header">
-                      <h2>upgrade user profit</h2>
-                    </div>
-                  <MdClose className='close-modal-btn' onClick={()=>{setShowUpgradeModal(false)}}/>
-                    <div className="modal-input-container">
-                          <div className="modal-input">
-                            <input type="tel" placeholder='0.00' onChange={(e)=>{
-                                setUserAmount(parseInt(e.target.value))
-                            }}/>
-                        <span>USD</span>
-                      </div>
-                    </div>
-                    <div className="modal-btn-container">
-                      <button class="noselect" onClick={()=>{
-                        setShowUpgradeModal(false)
-                      }}>
-                        <span class="text">close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"       width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>
-                      </button>
-                      <button className='next' onClick={()=>upgradeUser()}>
-                        <span class="label">Next</span>
-                        <span class="icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                </motion.div>
-            }
+            
             {
               showActiveForm && 
                <motion.div >
@@ -479,21 +470,27 @@ const Admindashboard = ({ route }) => {
                     </div>
                   <MdClose className='close-modal-btn' onClick={()=>{setShowActiveWalletForm(false)}}/>
                     <div className="modal-input-container">
-                          <div className="modal-input">
-                          <input type="text" placeholder='0.00' onChange={(e) =>{
+                          <div className="modal-input adress-input">
+                          <input type="text" placeholder='Enter New Wallet Address' onChange={(e) =>{
                             let newWallet = e.target.value
+                            setNewWallet(newWallet)
                             
                             }}/>
-                        <span>USD</span>
+                      </div>
+                          <div className="modal-input">
+                          <input type="text" placeholder='Enter Network' onChange={(e) =>{
+                            let network = e.target.value
+                            setNewNetwork(network)
+                            }}/>
                       </div>
                     </div>
                     <div className="modal-btn-container">
                       <button class="noselect" onClick={()=>{
-                        setShowUpgradeModal(false)
+                        setShowActiveWalletForm(false)
                       }}>
                         <span class="text">close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"       width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>
                       </button>
-                      <button className='next' onClick={()=>upgradeUser()}>
+                      <button className='next' onClick={()=>updateWallet()}>
                         <span class="label">Next</span>
                         <span class="icon">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
@@ -641,9 +638,13 @@ const Admindashboard = ({ route }) => {
                   
                   {
                     wallets ? wallets.map(wallet => (
-                      <div class="e-card playing" onClick={() => setActiveWallet({
-                        type: wallet.type,
-                      })}>
+                      <div class="e-card playing" onClick={() => {
+                        setActiveWallet({
+                          type: wallet.type,
+                          wallet: wallet.address
+                        })
+                        setShowActiveWalletForm(true)
+                      }}>
                         <div class="image"></div>
                       
                         <div class="wave"></div>
@@ -670,7 +671,7 @@ const Admindashboard = ({ route }) => {
                       20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br />
                           {wallet.type}
                           <br />
-                          <div class="name">{ wallet.wallet}</div>
+                          <div class="name">{ wallet.address}</div>
                         </div>
                       </div>)
                     ) : ''

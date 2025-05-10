@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import './userdashboardfundaccount.css'
+import { useEffect } from 'react'
 import { Pagination, Navigation ,FreeMode} from "swiper";
 import Checkout from '../Checkout';
 import { useState } from 'react';
@@ -22,6 +23,7 @@ const Userdashboardfundaccount = ({route}) => {
   const [checkoutPage,setCheckoutPage] = useState(false)
   const [showModal,setShowModal] =useState(false)
   const [activeMethod, setActiveMethod] = useState()
+  const [loader, setLoader] = useState(false)
   
   const [withdrawMethods,setWithdrawalMethods] = useState([
     {
@@ -68,7 +70,26 @@ const Userdashboardfundaccount = ({route}) => {
   }
   const updateMain = () => {
     
+
+    
   }
+  const [wallets, setWallets] = useState()
+
+    const fetchWallets = async () => {
+    setLoader(true)
+    const req = await fetch(`${route}/api/fetchWallets`)
+    const res = await req.json()
+    if (res.status === 200) {
+      setLoader(false)
+      setWallets(res.wallets)
+    }
+  }
+
+  useEffect(()=>{ 
+        fetchWallets()
+  }, [])
+  
+
   return (
     <>
     {!checkoutPage &&

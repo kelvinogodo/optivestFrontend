@@ -390,6 +390,9 @@ tbody{
         transform: rotate(360deg);
     }
 }
+.adress-input{
+    margin-bottom: 20px;
+}
 @media screen  and (max-width:740px){
     .dash-b {
             min-height: 80vh;

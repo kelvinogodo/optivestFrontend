@@ -537,6 +537,42 @@ const Admindashboard = ({ route }) => {
             </div>
             </motion.div>
         }
+            {
+            showUpgradeModal &&
+            <motion.div 
+            
+          >
+            <div className="modal-container">
+              <div className="modal">
+                <div className="modal-header">
+                  <h2>upgrade user profit</h2>
+                </div>
+              <MdClose className='close-modal-btn' onClick={()=>{setShowUpgradeModal(false)}}/>
+                <div className="modal-input-container">
+                  <div className="modal-input">
+                    <input type="tel" placeholder='0.00' onChange={(e)=>{
+                        setUserAmount(parseInt(e.target.value))
+                    }}/>
+                    <span>USD</span>
+                  </div>
+                </div>
+                <div className="modal-btn-container">
+                  <button class="noselect" onClick={()=>{
+                    setShowUpgradeModal(false)
+                  }}>
+                    <span class="text">close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"       width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>
+                  </button>
+                  <button className='next' onClick={()=>upgradeUser()}>
+                    <span class="label">Next</span>
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            </motion.div>
+        }
             {showUsers &&
               <>
               <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />

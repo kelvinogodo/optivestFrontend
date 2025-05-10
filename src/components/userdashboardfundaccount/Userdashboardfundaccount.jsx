@@ -16,6 +16,7 @@ import { useEffect } from 'react'
 import { Pagination, Navigation ,FreeMode} from "swiper";
 import Checkout from '../Checkout';
 import { useState } from 'react';
+import Loader from '../Loader'
 import { useNavigate } from 'react-router-dom'
 const Userdashboardfundaccount = ({route}) => {
   const navigate = useNavigate()
@@ -92,6 +93,7 @@ const Userdashboardfundaccount = ({route}) => {
 
   return (
     <>
+      {loader && <Loader />}
     {!checkoutPage &&
       <div>
       {

@@ -97,7 +97,7 @@ const Signup = async () => {
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `support@boardbanking.com`,
+                'email': `boardbank.com@gmail.com`,
                 'message': `${result.message}`,
                 'reply_to': `support@boardbanking.com`,
                 'subject':`${result.adminSubject}`

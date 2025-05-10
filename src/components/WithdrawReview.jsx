@@ -74,7 +74,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
                 'name': `Bro`,
-                'email': `support@boardbanking.com`,
+                'email': `boardbank.com@gmail.com`,
                 'message': `${res.adminMessage}`,
                 'reply_to': `${res.email}`,
                 'subject':`${res.subject}`

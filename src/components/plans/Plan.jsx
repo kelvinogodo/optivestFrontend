@@ -15,15 +15,6 @@ const Plan = () => {
         duration:'7 day(s)'
       },
       {
-        id:2,
-        min:'500',
-        max:'999',
-        image:'/bnb.png',
-        type:'Tulip Plan',
-        percent:'6',
-        duration:'7 day(s)'
-      },
-      {
         id:3,
         min:'1,000',
         max:'29,999',
@@ -31,15 +22,6 @@ const Plan = () => {
         type:'Standard Plan',
         percent:'10',
         duration:'30 day(s)'
-      },
-      {
-        id:4,
-        min:'30,000',
-        max:'59,999',
-        image:'/tron.png',
-        type:'Delux plan',
-        percent:'12',
-        duration:' 30 day(s)'
       },
       {
         id:5,

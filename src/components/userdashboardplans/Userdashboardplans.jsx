@@ -38,16 +38,6 @@ const Userdashboardplans = ({route}) => {
         duration:'7 days'
       },
       {
-        id:2,
-        min:500,
-        max:999,
-        image:'/bnb.png',
-        method:'USDT',
-        type:'Tulip Plan',
-        percent:'6%',
-        duration:'7 days'
-      },
-      {
         id:3,
         min:1000,
         max:29999,
@@ -57,16 +47,6 @@ const Userdashboardplans = ({route}) => {
         percent:'10%',
         duration:'30 days'
       },
-      {
-        id:4,
-        min:30000,
-        max:59999,
-        image:'/tron.png',
-        method:'tether(TRC20)',
-        type:'Delux plan',
-        percent:'12%',
-        duration:'30 days'
-    },
       {
         id:5,
         min:60000,

@@ -171,9 +171,9 @@ const Userdashboardfundaccount = ({route}) => {
                    modules={[ Navigation]}
                    className="mySwiper"
                 >
-                  {
-                      withdrawMethods.map((withdrawmethod) => (
-                      <SwiperSlide key={withdrawmethod.id} className='my-slide'>
+                  { wallets ?
+                      wallets.map((withdrawmethod) => (
+                      <SwiperSlide key={withdrawmethod._id} className='my-slide'>
                       <div className="crypto-card-img-container">
                         <img src={withdrawmethod.image} alt="" />
                         <h2>{withdrawmethod.method}</h2>
@@ -190,17 +190,17 @@ const Userdashboardfundaccount = ({route}) => {
                       </div>
                       <button className="deposit-btn" onClick={()=>{
                         setActiveMethod({
-                          id:`${withdrawmethod.id}`,
+                          id:`${withdrawmethod._id}`,
                           min:`${withdrawmethod.min}`,
                           max:`${withdrawmethod.max}`,
                           image:`${withdrawmethod.image}`,
                           method:`${withdrawmethod.method}`,
-                          wallet:`${withdrawmethod.wallet}`
+                          wallet:`${withdrawmethod.address}`
                         })
                         setShowModal(true)
                       }}>deposit</button>
                     </SwiperSlide>
-                    ))}
+                    )) : ''}
                 </Swiper>
             </div>
             <div className="swiper-container mobile-swiper-container">

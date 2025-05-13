@@ -57,7 +57,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
               })
             
             const data = {
-            service_id: 'service_z18ebcc',
+            service_id: 'service_878f9xm',
             template_id: 'template_0mgkpiq',
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
@@ -69,7 +69,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
             }
             };
             const adminData = {
-            service_id: 'service_z18ebcc',
+            service_id: 'service_878f9xm',
             template_id: 'template_0mgkpiq',
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {
@@ -108,7 +108,7 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
                 title:  `${res.withdrawMessage}`
               })
             const data = {
-            service_id: 'service_z18ebcc',
+            service_id: 'service_878f9xm',
             template_id: 'template_0mgkpiq',
             user_id: 'jypXWeOBocgjEo5Cj',
             template_params: {

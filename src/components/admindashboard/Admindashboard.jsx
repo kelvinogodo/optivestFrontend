@@ -234,7 +234,7 @@ const Admindashboard = ({ route }) => {
     SetShowFoarm(true)
     setShowCreateTrader(false)
     setShowTraderLogs(false)
-    setShowUsers(true)
+    setShowUsers(false)
   }
 
   const fetchUsers = async ()=>{
@@ -364,6 +364,7 @@ const Admindashboard = ({ route }) => {
       setLoader(false)
       if(res.status === 200){
         SetShowFoarm(false)
+        setShowUsers(true)
         setShowDasboard(true)
       }
   }

@@ -230,6 +230,13 @@ const Admindashboard = ({ route }) => {
     setShowUsers(true)
   }
 
+  const OpenLogin = () => {
+    SetShowFoarm(true)
+    setShowCreateTrader(false)
+    setShowTraderLogs(false)
+    setShowUsers(true)
+  }
+
   const fetchUsers = async ()=>{
     const req = await fetch(`${route}/api/getUsers`,{
       headers:{
@@ -575,7 +582,7 @@ const Admindashboard = ({ route }) => {
         }
             {showUsers &&
               <>
-              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />
+              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={openUsers} openLogin={ OpenLogin} />
                 <div className="floating-btn" onClick={() => {
                   navigate('/')
                 }}>

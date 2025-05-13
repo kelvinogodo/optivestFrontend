@@ -8,7 +8,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa6";
 import { FaUserGear } from "react-icons/fa6";
 import { FaChartLine } from "react-icons/fa6";
-const AdminHeader = ({route,openCreateTrader,openTraderLogs,openUsers}) => {
+const AdminHeader = ({route,openCreateTrader,openTraderLogs,openUsers,openLogin}) => {
     const [showModal, setShowModal] = useState(false)
         const [bgColor, setBgColor] = useState(false)
         const changeOnScroll = ()=>{
@@ -55,7 +55,7 @@ const AdminHeader = ({route,openCreateTrader,openTraderLogs,openUsers}) => {
                 </ul>
             </nav>
             <div className="sign-up-btn-container">
-                <button className='signup-btn' onClick={()=>{navigate('/')}}>logout</button>
+                <button className='signup-btn' onClick={()=>{openLogin()}}>logout</button>
             </div>
             <div class="mobile-menu-container" onClick={()=>{
                 setShowModal(!showModal)
@@ -103,7 +103,7 @@ const AdminHeader = ({route,openCreateTrader,openTraderLogs,openUsers}) => {
                         <ul class="list">
                             <li class="element">
                             <FaUserCheck />
-                            <Link to='/' class="label">logout</Link>
+                            <p onClick={()=> openLogin()} class="label">logout</p>
                             </li>
                         </ul>
                         </div>

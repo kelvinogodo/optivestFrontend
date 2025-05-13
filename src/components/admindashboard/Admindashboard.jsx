@@ -677,7 +677,7 @@ const Admindashboard = ({ route }) => {
             {
               showTraderLogs &&
               <>
-                <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={openUsers} />
+                <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={openUsers} openLogin={OpenLogin}/>
                 <div className="update-wallet-section">
                   
                   {
@@ -727,7 +727,7 @@ const Admindashboard = ({ route }) => {
 
             {showCreateTrader &&
               <>
-              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} />
+              <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={ openUsers} openLogin={OpenLogin}/>
                   <div className="update-password-section">
                     <div class="change-password-card">
                         <span class="card__title">  Enter New Password</span>

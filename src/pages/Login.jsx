@@ -132,7 +132,7 @@ const Login = ({route}) => {
           }} />
           <div class="title_container">
             <p class="titles">Login to your Account</p>
-            <span class="subtitle">Welcome to apexcopytrade, login and enjoy the best investment experience.</span>
+            <span class="subtitle">Welcome to Boardbank, login and enjoy the best investment experience.</span>
           </div>
           <br/>
           <div class="input_containers">

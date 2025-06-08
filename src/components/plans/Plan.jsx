@@ -106,7 +106,7 @@ const Plan = () => {
                     </svg>
                   </span>
                   <p>
-                    Instant withdrawal
+                    weekly income
                   </p>
                 </li>
                 <li class="list">

@@ -92,10 +92,7 @@ const Plan = () => {
               <div class="pack-container" key={withdrawmethod.id} data-aos="fade-up">
             <div class="pack-header">
               <h3>{withdrawmethod.type}</h3>
-              <div class="price-container">
-                {withdrawmethod.percent}
-                <span>%</span>
-              </div>
+              
             </div>
             <div>
               <ul class="lists">
@@ -106,7 +103,8 @@ const Plan = () => {
                     </svg>
                   </span>
                   <p>
-                    weekly income
+                  {withdrawmethod.percent}
+                  <span>%</span>
                   </p>
                 </li>
                 <li class="list">

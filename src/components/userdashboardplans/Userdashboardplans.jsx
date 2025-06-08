@@ -255,7 +255,7 @@ const Userdashboardplans = ({route}) => {
                     <div className="plan-card-headerdiv">
                       <span className="small-plan-head">
                         <h3>{withdrawmethod.percent}</h3>
-                        <p>everyday</p>
+                        <p>weekly</p>
                       </span>
                       <span className="small-plan-head">
                               <h3>{ withdrawmethod.duration}</h3>

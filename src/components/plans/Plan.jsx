@@ -12,7 +12,7 @@ const Plan = () => {
         image:'/btc.png',
         method:'BTC',
         type:'Tryo plan',
-        percent:'7.5%',
+        percent:'7.5',
         duration:'365 days'
       },
       {
@@ -22,7 +22,7 @@ const Plan = () => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'Medical Plan',
-        percent:'25.90%',
+        percent:'25.90',
         duration:'365 days'
       },
       {
@@ -31,7 +31,7 @@ const Plan = () => {
         max:'50,000',
         image:'/tron.png',
         type:'Gold plan',
-        percent:'33.50%',
+        percent:'33.50',
         duration:'365 days'
       },
       {
@@ -40,7 +40,7 @@ const Plan = () => {
         max:'54,499',
         image:'/tron.png',
         type:'Veltrix Plan',
-        percent:'39.90%',
+        percent:'39.90',
         duration:'365 days'
       },
       {
@@ -49,7 +49,7 @@ const Plan = () => {
         max:'1,000,000',
         image:'/tron.png',
         type:'Ruby Account',
-        percent:'20.976%',
+        percent:'20.976',
         duration:'365 days'
       },
       {
@@ -58,7 +58,7 @@ const Plan = () => {
         max:'150,000',
         image:'/tron.png',
         type:'VIP I Plan',
-        percent:'41.395%',
+        percent:'41.395',
         duration:'365 days'
       },
       {
@@ -67,7 +67,7 @@ const Plan = () => {
         max:'5,000,000',
         image:'/tron.png',
         type:'VIP II',
-        percent:'45.96%',
+        percent:'45.96',
         duration:'365 days'
       },
       ])

@@ -20,7 +20,7 @@ const Aboutpage = () => {
         </div>
       </section>
       <Copytrade />
-      <TradeInfo />
+      {/* <TradeInfo /> */}
       <Why />
       <ForexAnalysisSection />
       <Contact />

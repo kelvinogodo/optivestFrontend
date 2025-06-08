@@ -57,7 +57,7 @@ const Plan = () => {
         min:'55,000',
         max:'150,000',
         image:'/tron.png',
-        type:'VIP I Plan',
+        type:'VIP I ',
         percent:'41.395',
         duration:'365 days'
       },
@@ -103,7 +103,7 @@ const Plan = () => {
                     </svg>
                   </span>
                   <p>
-                  {withdrawmethod.percent}%
+                  {withdrawmethod.percent}% instant weekly withdrawals
                   </p>
                 </li>
                 <li class="list">

@@ -7,39 +7,68 @@ const Plan = () => {
     const [withdrawMethods,setWithdrawalMethods] = useState([
       {
         id:1,
-        min:'50',
-        max:'499',
+        min:'1,000',
+        max:'4,999',
         image:'/btc.png',
-        type:'Orchid plan',
-        percent:'5',
-        duration:'7 day(s)'
+        method:'BTC',
+        type:'Tryo plan',
+        percent:'7.5%',
+        duration:'365 days'
+      },
+      {
+        id:2,
+        min:'5,000',
+        max:'9,499',
+        image:'/tron.png',
+        method:'tether(TRC20)',
+        type:'Medical Plan',
+        percent:'25.90%',
+        duration:'365 days'
       },
       {
         id:3,
-        min:'1,000',
-        max:'29,999',
+        min:'9,500',
+        max:'50,000',
         image:'/tron.png',
-        type:'Standard Plan',
-        percent:'10',
-        duration:'30 day(s)'
+        type:'Gold plan',
+        percent:'33.50%',
+        duration:'365 days'
+      },
+      {
+        id:4,
+        min:'25,000',
+        max:'54,499',
+        image:'/tron.png',
+        type:'Veltrix Plan',
+        percent:'39.90%',
+        duration:'365 days'
       },
       {
         id:5,
-        min:'60,000',
-        max:'80,000',
+        min:'88,000',
+        max:'1,000,000',
         image:'/tron.png',
-        type:'Pearl plan',
-        percent:'15',
-        duration:' 30 day(s)'
+        type:'Ruby Account',
+        percent:'20.976%',
+        duration:'365 days'
       },
       {
         id:6,
-        min:'80,001',
-        max:'100,000',
+        min:'55,000',
+        max:'150,000',
         image:'/tron.png',
-        type:'Diamond plan',
-        percent:'20',
-        duration:' 30 day(s)'
+        type:'VIP I Plan',
+        percent:'41.395%',
+        duration:'365 days'
+      },
+      {
+        id:7,
+        min:'150,000',
+        max:'5,000,000',
+        image:'/tron.png',
+        type:'VIP II',
+        percent:'45.96%',
+        duration:'365 days'
       },
       ])
   return (

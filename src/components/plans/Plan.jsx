@@ -103,8 +103,7 @@ const Plan = () => {
                     </svg>
                   </span>
                   <p>
-                  {withdrawmethod.percent}
-                  <span>%</span>
+                  {withdrawmethod.percent}%
                   </p>
                 </li>
                 <li class="list">

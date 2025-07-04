@@ -29,7 +29,7 @@ const Userdashboardplans = ({route}) => {
   const [withdrawMethods,setWithdrawalMethods] = useState([
     {
         id:1,
-        min:1000,
+        min:500,
         max:4999,
         image:'/btc.png',
         method:'BTC',

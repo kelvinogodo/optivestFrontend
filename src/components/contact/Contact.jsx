@@ -36,7 +36,7 @@ const Contact = () => {
                 <a href='https://t.me/BOARDBANKHELP' className="ball contact-ball" target='blank'>
                     <FaTelegramPlane />
                 </a>
-                <a href='mailto:raybyronn@gmail.com' className="ball contact-ball" target='blank'>
+                <a href='mailto:boardbank.com@gmail.com' className="ball contact-ball" target='blank'>
                     <FiMail />
                 </a>
                 {/* <a href="http://www.boardbanking.com/user/raybyronn@gmail.com"className="ball contact-ball" target='blank'>

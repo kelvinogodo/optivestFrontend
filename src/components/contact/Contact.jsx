@@ -33,7 +33,7 @@ const Contact = () => {
                 Any question? Reach out to us and we’ll get back to you shortly.
             </p>
             <div className="contact-card" data-aos="fade-up">
-                <a href='https://t.me/BOARDBANKHELP' className="ball contact-ball" target='blank'>
+                <a href='https://t.me/BOARDBANKtghelp' className="ball contact-ball" target='blank'>
                     <FaTelegramPlane />
                 </a>
                 <a href='mailto:boardbank.com@gmail.com' className="ball contact-ball" target='blank'>

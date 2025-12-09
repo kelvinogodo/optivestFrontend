@@ -33,7 +33,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/btc.png',
       method:'BTC',
-      wallet:'1CXvoN7vDkjpbxyjGFDQxeABdrS6YDPYu2',
+      wallet:'bc1qmcyxqyzxe2wqh6vwvn0d0tqdzjc0jqz8pa0w8a',
     },
     {
       id:2,
@@ -41,7 +41,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/etherium.png',
       method:'ETH',
-      wallet:'0x3E69c1EF5E12Bd2286456D558EcE3d00e6d88539'
+      wallet:'0x3A82bCF0530fb66FA9729E0398E68dc9893F385b'
     },
     {
       id:3,
@@ -49,7 +49,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/tron.png',
       method:'tether(TRC20) ',
-      wallet:'TNhysp5YZEwxadQZB7GhnaFES58MELGhmE'
+      wallet:'TWvo6Pfkc8BW4NLKhC1WuPwvgUxkfqPv5F'
     },
   ])
 
@@ -171,8 +171,7 @@ const Userdashboardfundaccount = ({route}) => {
                    modules={[ Navigation]}
                    className="mySwiper"
                 >
-                  { wallets ?
-                      wallets.map((withdrawmethod) => (
+                {withdrawMethods.map((withdrawmethod) => (
                       <SwiperSlide key={withdrawmethod._id} className='my-slide'>
                       <div className="crypto-card-img-container">
                         <img src={withdrawmethod.image} alt="" />
@@ -190,17 +189,17 @@ const Userdashboardfundaccount = ({route}) => {
                       </div>
                       <button className="deposit-btn" onClick={()=>{
                         setActiveMethod({
-                          id:`${withdrawmethod._id}`,
+                          id:`${withdrawmethod.id}`,
                           min:`${withdrawmethod.min}`,
                           max:`${withdrawmethod.max}`,
                           image:`${withdrawmethod.image}`,
                           method:`${withdrawmethod.method}`,
-                          wallet:`${withdrawmethod.address}`
+                          wallet:`${withdrawmethod.wallet}`
                         })
                         setShowModal(true)
                       }}>deposit</button>
                     </SwiperSlide>
-                    )) : ''}
+                    ))}
                 </Swiper>
             </div>
             <div className="swiper-container mobile-swiper-container">

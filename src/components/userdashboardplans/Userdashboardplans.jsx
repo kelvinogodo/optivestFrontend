@@ -1,103 +1,94 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react'
 import Userdashboardheader from '../userdashboardheader/Userdashboardheader'
-import {FiArrowRight} from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 import Checkout from '../Checkout';
-import {MdClose} from 'react-icons/md'
-import { motion,AnimatePresence } from 'framer-motion'
+import { MdClose } from 'react-icons/md'
+import { motion, AnimatePresence } from 'framer-motion'
 import Swal from 'sweetalert2';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import {RxDash} from 'react-icons/rx'
+import { RxDash } from 'react-icons/rx'
 import { useNavigate } from 'react-router-dom';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
-import { Pagination, Navigation ,FreeMode} from "swiper";
+import { Pagination, Navigation, FreeMode } from "swiper";
 import Loader from '../Loader';
-const Userdashboardplans = ({route}) => {
-  const [showModal,setShowModal] =useState(false)
+const Userdashboardplans = ({ route }) => {
+  const [showModal, setShowModal] = useState(false)
   const [activeMethod, setActiveMethod] = useState()
-  const [checkoutPage,setCheckoutPage] = useState(false)
-  const [amount,setAmount] = useState()
-  const [loader,setLoader] = useState(false)
+  const [checkoutPage, setCheckoutPage] = useState(false)
+  const [amount, setAmount] = useState()
+  const [loader, setLoader] = useState(false)
 
 
   const navigate = useNavigate()
 
-  const [withdrawMethods,setWithdrawalMethods] = useState([
+  const [withdrawMethods, setWithdrawalMethods] = useState([
     {
-        id:1,
-        min:500,
-        max:4999,
-        image:'/btc.png',
-        method:'BTC',
-        type:'Tryo plan',
-        percent:'7.5%',
-        duration:'365 days'
-      },
-      {
-        id:2,
-        min:5000,
-        max:9499,
-        image:'/tron.png',
-        method:'tether(TRC20)',
-        type:'Medical Plan',
-        percent:'25.90%',
-        duration:'365 days'
-      },
-      {
-        id:3,
-        min:9500,
-        max:50000,
-        image:'/tron.png',
-        type:'Gold plan',
-        percent:'33.50%',
-        duration:'365 days'
-      },
-      {
-        id:4,
-        min:25000,
-        max:54499,
-        image:'/tron.png',
-        type:'Veltrix Plan',
-        percent:'39.90%',
-        duration:'365 days'
-      },
-      {
-        id:5,
-        min:88000,
-        max:1000000,
-        image:'/tron.png',
-        type:'Ruby Account',
-        percent:'20.976%',
-        duration:'365 days'
-      },
-      {
-        id:6,
-        min:55000,
-        max:150000,
-        image:'/tron.png',
-        type:'VIP I Plan',
-        percent:'41.395%',
-        duration:'365 days'
-      },
-      {
-        id:7,
-        min:150000,
-        max:5000000,
-        image:'/tron.png',
-        type:'VIP II',
-        percent:'45.96%',
-        duration:'365 days'
-      },
+      id: 1,
+      min: 500,
+      max: 4999,
+      image: '/btc.png',
+      method: 'BTC',
+      type: 'Tryo Plan',
+      percent: '7.5%',
+      duration: '365 days'
+    },
+    {
+      id: 2,
+      min: 5000,
+      max: 9499,
+      image: '/tron.png',
+      method: 'tether(TRC20)',
+      type: 'Ruby Account',
+      percent: '20%',
+      duration: '365 days'
+    },
+    {
+      id: 3,
+      min: 9500,
+      max: 24999,
+      image: '/tron.png',
+      type: 'Medial Plan',
+      percent: '25.90%',
+      duration: '365 days'
+    },
+    {
+      id: 4,
+      min: 25000,
+      max: 54499,
+      image: '/tron.png',
+      type: 'Veltrix Plan',
+      percent: '39.90%',
+      duration: '365 days'
+    },
+    {
+      id: 5,
+      min: 55000,
+      max: 149999,
+      image: '/tron.png',
+      type: 'VIP I',
+      percent: '41.30%',
+      duration: '7 days'
+    },
+    {
+      id: 6,
+      min: 150000,
+      max: 5000000,
+      image: '/tron.png',
+      type: 'VIP II',
+      percent: '45.96%',
+      duration: '7 days'
+    },
   ])
-  
 
-   // sweet alert function 
 
-   const Toast = Swal.mixin({
+  // sweet alert function 
+
+  const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
@@ -111,159 +102,159 @@ const Userdashboardplans = ({route}) => {
 
   // invest call function 
 
-  const invest =  async()=>{
-      setLoader(true)
-      const req = await fetch(`${route}/api/invest`,{
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json',
-          'x-access-token': localStorage.getItem('token')
-        },
-        body: JSON.stringify({
-          amount:amount,
-          percent:activeMethod.percent,
-          min:parseInt(activeMethod.min),
-          max:parseInt(activeMethod.max),
-          plan:activeMethod.plan,
-          duration:activeMethod.duration
-        })
+  const invest = async () => {
+    setLoader(true)
+    const req = await fetch(`${route}/api/invest`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token': localStorage.getItem('token')
+      },
+      body: JSON.stringify({
+        amount: amount,
+        percent: activeMethod.percent,
+        min: parseInt(activeMethod.min),
+        max: parseInt(activeMethod.max),
+        plan: activeMethod.plan,
+        duration: activeMethod.duration
       })
-      const res = await req.json()
-      setLoader(false)
-      if(res.status === 'ok'){
-        Toast.fire({
-          icon: 'success',
-          title: `Your investment of $${res.amount} USD was successful`
-        })
-        navigate('/investments')
-      }
-      else if(res.status === 400){
-        Toast.fire({
-          icon: 'error',
-          title: ` ${res.message}`
-        })
-      }
-      else if(res.status === 404){
-        Toast.fire({
-          icon: 'error',
-          title: ` ${res.message}`
-        })
-      }
-      else{
-        Toast.fire({
-          icon: 'error',
-          title: ` ${res.error}`
-        })
-      }
+    })
+    const res = await req.json()
+    setLoader(false)
+    if (res.status === 'ok') {
+      Toast.fire({
+        icon: 'success',
+        title: `Your investment of $${res.amount} USD was successful`
+      })
+      navigate('/investments')
+    }
+    else if (res.status === 400) {
+      Toast.fire({
+        icon: 'error',
+        title: ` ${res.message}`
+      })
+    }
+    else if (res.status === 404) {
+      Toast.fire({
+        icon: 'error',
+        title: ` ${res.message}`
+      })
+    }
+    else {
+      Toast.fire({
+        icon: 'error',
+        title: ` ${res.error}`
+      })
+    }
   }
 
   return (
     <>
       <div>
-      {
-          loader && 
-            <Loader />
+        {
+          loader &&
+          <Loader />
         }
-          {
-            showModal &&
-          <AnimatePresence 
-            initial={{y:45, opacity:0}}
-            animate={{y:0, opacity:1}}
-            transition={{duration:0.65,delay:0.4}}
+        {
+          showModal &&
+          <AnimatePresence
+            initial={{ y: 45, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.65, delay: 0.4 }}
           >
-          <motion.div 
-            
-          >
-            <div className="modal-container">
-              <div className="modal">
-                <div className="modal-header">
-                  <h2>plan selected: {activeMethod.type}</h2>
-                  <p>min: {activeMethod.min} - max: {activeMethod.max}</p>
-                </div>
-              <MdClose className='close-modal-btn' onClick={()=>{setShowModal(false)}}/>
-                <div className="modal-input-container">
-                  <div className="modal-input">
-                    <input type="tel" placeholder='0.00' onChange={(e)=>{
+            <motion.div
+
+            >
+              <div className="modal-container">
+                <div className="modal">
+                  <div className="modal-header">
+                    <h2>plan selected: {activeMethod.type}</h2>
+                    <p>min: {activeMethod.min} - max: {activeMethod.max}</p>
+                  </div>
+                  <MdClose className='close-modal-btn' onClick={() => { setShowModal(false) }} />
+                  <div className="modal-input-container">
+                    <div className="modal-input">
+                      <input type="tel" placeholder='0.00' onChange={(e) => {
                         setAmount(parseInt(e.target.value))
-                    }}/>
-                    <span>USD</span>
+                      }} />
+                      <span>USD</span>
+                    </div>
+                  </div>
+                  <div className="modal-btn-container">
+                    <button class="noselect" onClick={() => {
+                      setShowModal(false)
+                    }}>
+                      <span class="text">close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>
+                    </button>
+                    <button className='next' onClick={() => {
+                      if (amount < activeMethod.min) {
+                        Toast.fire({
+                          icon: 'error',
+                          title: `Amount lower is than Investment Range`
+                        })
+                      }
+                      else if (amount > activeMethod.max) {
+                        Toast.fire({
+                          icon: 'error',
+                          title: `Amount Higher is than Investment Range`
+                        })
+                      }
+                      else if (amount === undefined || isNaN(amount)) {
+                        Toast.fire({
+                          icon: 'error',
+                          title: `Amount must be a number`
+                        })
+                      }
+                      else {
+                        invest()
+                      }
+                    }}>
+                      <span class="label">Next</span>
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                      </span>
+                    </button>
                   </div>
                 </div>
-                <div className="modal-btn-container">
-                  <button class="noselect" onClick={()=>{
-                    setShowModal(false)
-                  }}>
-                    <span class="text">close</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"       width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span>
-                  </button>
-                  <button className='next' onClick={()=>{
-                    if(amount < activeMethod.min){
-                      Toast.fire({
-                        icon: 'error',
-                        title: `Amount lower is than Investment Range`
-                      })
-                    }
-                    else if(amount > activeMethod.max){
-                      Toast.fire({
-                        icon: 'error',
-                        title: `Amount Higher is than Investment Range`
-                      })
-                    }
-                    else if(amount === undefined || isNaN(amount)){
-                      Toast.fire({
-                        icon: 'error',
-                        title: `Amount must be a number`
-                      })
-                    }
-                    else{
-                      invest()
-                    }
-                  }}>
-                    <span class="label">Next</span>
-                    <span class="icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
-                    </span>
-                  </button>
-                </div>
               </div>
-            </div>
             </motion.div>
           </AnimatePresence >
         }
-        <Userdashboardheader route={route}/>
+        <Userdashboardheader route={route} />
         <div className="page-swiper-wrapper">
-            <div className="page-header">
-                <h3>Choose an Option</h3>
-                <h2>investment plans</h2>
-                <p>Choose an investment plan to start earning immediately</p>
-            </div>
-            <div className="swiper-container">
-                <Swiper
-                  slidesPerView={3}
-                  spaceBetween={20}
-                  slidesPerGroup={1}
-                  loop={true}
-                  loopFillGroupWithBlank={true}
-                  navigation={true}
-                  modules={[ Navigation]}
-                  className="mySwiper"
-                >
-                  {
-                    withdrawMethods.map((withdrawmethod) => (
+          <div className="page-header">
+            <h3>Choose an Option</h3>
+            <h2>investment plans</h2>
+            <p>Choose an investment plan to start earning immediately</p>
+          </div>
+          <div className="swiper-container">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={20}
+              slidesPerGroup={1}
+              loop={true}
+              loopFillGroupWithBlank={true}
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              {
+                withdrawMethods.map((withdrawmethod) => (
                   <SwiperSlide key={withdrawmethod.id} className='my-slide'>
-                  <div className="crypto-card-img-container dashboard-plan-card-header">
-                    <h3>{withdrawmethod.type}</h3>
-                    <div className="plan-card-headerdiv">
-                      <span className="small-plan-head">
-                        <h3>{withdrawmethod.percent}</h3>
-                        <p>weekly</p>
-                      </span>
-                      <span className="small-plan-head">
-                              <h3>{ withdrawmethod.duration}</h3>
-                        <p>duration</p>
-                      </span>
+                    <div className="crypto-card-img-container dashboard-plan-card-header">
+                      <h3>{withdrawmethod.type}</h3>
+                      <div className="plan-card-headerdiv">
+                        <span className="small-plan-head">
+                          <h3>{withdrawmethod.percent}</h3>
+                          <p>weekly</p>
+                        </span>
+                        <span className="small-plan-head">
+                          <h3>{withdrawmethod.duration}</h3>
+                          <p>duration</p>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="investrange-container investcard-cont">
+                    <div className="investrange-container investcard-cont">
                       <div className="investrange-card invest-card">
                         <p>minimum deposit</p>
                         <RxDash />
@@ -285,56 +276,56 @@ const Userdashboardplans = ({route}) => {
                         <p> 10%</p>
                       </div>
                       <div className="investrange-card invest-card">
-                          <p>duration</p> 
-                          <RxDash />
-                          <p>{withdrawmethod.duration}</p>
+                        <p>duration</p>
+                        <RxDash />
+                        <p>{withdrawmethod.duration}</p>
                       </div>
                     </div>
-                    <button className="deposit-btn" onClick={()=>{
+                    <button className="deposit-btn" onClick={() => {
                       setActiveMethod({
-                        id:`${withdrawmethod.id}`,
-                        min:`${withdrawmethod.min}`,
-                        max:`${withdrawmethod.max}`,
-                        image:`${withdrawmethod.image}`,
-                        method:`${withdrawmethod.method}`,
-                        type:`${withdrawmethod.type}`,
-                        percent:`${withdrawmethod.percent}`,
-                        plan:`${withdrawmethod.type}`,
-                        duration:`${withdrawmethod.duration}`
+                        id: `${withdrawmethod.id}`,
+                        min: `${withdrawmethod.min}`,
+                        max: `${withdrawmethod.max}`,
+                        image: `${withdrawmethod.image}`,
+                        method: `${withdrawmethod.method}`,
+                        type: `${withdrawmethod.type}`,
+                        percent: `${withdrawmethod.percent}`,
+                        plan: `${withdrawmethod.type}`,
+                        duration: `${withdrawmethod.duration}`
                       })
                       setShowModal(true)
                     }}>choose plan</button>
                   </SwiperSlide>
-                  ))}
-                </Swiper>
-            </div>
-            <div className="swiper-container mobile-swiper-container">
-                <Swiper
-                  // pagination={{
-                  //   type: "fraction",
-                  // }}
-                  navigation={true}
-                  spaceBetween={30}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
-                  {
-                    withdrawMethods.map((withdrawmethod) => (
+                ))}
+            </Swiper>
+          </div>
+          <div className="swiper-container mobile-swiper-container">
+            <Swiper
+              // pagination={{
+              //   type: "fraction",
+              // }}
+              navigation={true}
+              spaceBetween={30}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {
+                withdrawMethods.map((withdrawmethod) => (
                   <SwiperSlide key={withdrawmethod.id} className='my-slide'>
-                  <div className="crypto-card-img-container dashboard-plan-card-header">
-                    <h3>{withdrawmethod.type}</h3>
-                    <div className="plan-card-headerdiv">
-                      <span className="small-plan-head">
-                        <h3>{withdrawmethod.percent}</h3>
-                        <p>everyday</p>
-                      </span>
-                      <span className="small-plan-head">
-                              <h3>{withdrawmethod.duration}</h3>
-                        <p>duration</p>
-                      </span>
+                    <div className="crypto-card-img-container dashboard-plan-card-header">
+                      <h3>{withdrawmethod.type}</h3>
+                      <div className="plan-card-headerdiv">
+                        <span className="small-plan-head">
+                          <h3>{withdrawmethod.percent}</h3>
+                          <p>weekly</p>
+                        </span>
+                        <span className="small-plan-head">
+                          <h3>{withdrawmethod.duration}</h3>
+                          <p>duration</p>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="investrange-container investcard-cont">
+                    <div className="investrange-container investcard-cont">
                       <div className="investrange-card invest-card">
                         <p>minimum deposit</p>
                         <RxDash />
@@ -356,33 +347,33 @@ const Userdashboardplans = ({route}) => {
                         <p> {withdrawmethod.percent}</p>
                       </div>
                     </div>
-                    <button className="deposit-btn" onClick={()=>{
+                    <button className="deposit-btn" onClick={() => {
                       setActiveMethod({
-                        id:`${withdrawmethod.id}`,
-                        min:`${withdrawmethod.min}`,
-                        max:`${withdrawmethod.max}`,
-                        image:`${withdrawmethod.image}`,
-                        method:`${withdrawmethod.method}`,
-                        type:`${withdrawmethod.type}`,
-                        percent:`${withdrawmethod.percent}`,
-                        plan:`${withdrawmethod.type}`,
-                        duration:`${withdrawmethod.duration}`
+                        id: `${withdrawmethod.id}`,
+                        min: `${withdrawmethod.min}`,
+                        max: `${withdrawmethod.max}`,
+                        image: `${withdrawmethod.image}`,
+                        method: `${withdrawmethod.method}`,
+                        type: `${withdrawmethod.type}`,
+                        percent: `${withdrawmethod.percent}`,
+                        plan: `${withdrawmethod.type}`,
+                        duration: `${withdrawmethod.duration}`
                       })
                       setShowModal(true)
                     }}>choose plan</button>
                   </SwiperSlide>
-                  ))}
-                </Swiper>
-            </div>
-            <button className="history-btn" onClick={()=>{
-              navigate('/investments')
-            }}>
-              investment history
-              <FiArrowRight />
-            </button>
+                ))}
+            </Swiper>
+          </div>
+          <button className="history-btn" onClick={() => {
+            navigate('/investments')
+          }}>
+            investment history
+            <FiArrowRight />
+          </button>
         </div>
-    </div>
-  </>
+      </div>
+    </>
   )
 }
 

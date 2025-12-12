@@ -862,7 +862,7 @@ const Admindashboard = ({ route }) => {
             <>
               <AdminHeader openCreateTrader={openCreateTrader} openTraderLogs={openTraderLogs} route={route} openUsers={openUsers} openLogin={OpenLogin} openBulkEmail={openBulkEmail} />
               <div className="update-password-section" style={{ backgroundColor: '#f4f7fc' }}>
-                <div class="change-password-card" style={{ height: 'auto', padding: '40px', width: '90%', maxWidth: '800px', borderRadius: '15px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+                <div class="change-password-card" style={{ height: 'auto', padding: '40px', width: '90%', maxWidth: '800px', borderRadius: '15px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', margin: '50px 0' }}>
                   <div style={{ marginBottom: '20px', textAlign: 'center' }}>
                     <span class="card__title" style={{ fontSize: '28px', color: '#1a202c' }}>📢 Broadcast Message</span>
                     <p class="card__content" style={{ fontSize: '16px', color: '#718096', marginTop: '5px' }}>Send an important announcement to all registered users.</p>

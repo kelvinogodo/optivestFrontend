@@ -1,6 +1,7 @@
 import React from 'react'
 import Userdashboardheader from '../userdashboardheader/Userdashboardheader'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaRobot } from "react-icons/fa";
@@ -97,10 +98,10 @@ const TradingBot = ({ route }) => {
                   <p className="baux-description" style={{ textAlign: 'center', fontSize: '0.9rem', marginBottom: '1rem', padding: '0 10px',color: '#6e6e6eff' }}>
                     With BAUXBOT, you not only gain access to ready-to-use expert advisor but also an intuitive Bot Generator, enabling you to create fully customized trading systems without any stress or experience. Its automation built for investors of all levels, combining simplicity, flexibility, and advanced AI.
                   </p>
-                  <div class="action" onClick={() => { setShowModal(true); setMain(false) }}>
-                    <a class="button" href="#">
+                  <div class="action" >
+                    <Link to="/bot-purchase" class="button" >
                       Purchase
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

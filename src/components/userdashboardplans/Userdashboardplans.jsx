@@ -35,6 +35,7 @@ const Userdashboardplans = ({ route }) => {
       method: 'BTC',
       type: 'Tryo Plan',
       percent: '7.5%',
+      dailyPercent: '1.07%',
       duration: '365 days'
     },
     {
@@ -45,6 +46,7 @@ const Userdashboardplans = ({ route }) => {
       method: 'tether(TRC20)',
       type: 'Ruby Account',
       percent: '20%',
+      dailyPercent: '2.85%',
       duration: '365 days'
     },
     {
@@ -54,6 +56,7 @@ const Userdashboardplans = ({ route }) => {
       image: '/tron.png',
       type: 'Medial Plan',
       percent: '25.90%',
+      dailyPercent: '3.70%',
       duration: '365 days'
     },
     {
@@ -63,6 +66,7 @@ const Userdashboardplans = ({ route }) => {
       image: '/tron.png',
       type: 'Veltrix Plan',
       percent: '39.90%',
+      dailyPercent: '5.70%',
       duration: '365 days'
     },
     {
@@ -72,6 +76,7 @@ const Userdashboardplans = ({ route }) => {
       image: '/tron.png',
       type: 'VIP I',
       percent: '41.30%',
+      dailyPercent: '5.90%',
       duration: '7 days'
     },
     {
@@ -81,6 +86,7 @@ const Userdashboardplans = ({ route }) => {
       image: '/tron.png',
       type: 'VIP II',
       percent: '45.96%',
+      dailyPercent: '6.56%',
       duration: '7 days'
     },
   ])
@@ -266,9 +272,9 @@ const Userdashboardplans = ({ route }) => {
                         <p>$ {withdrawmethod.max} USD</p>
                       </div>
                       <div className="investrange-card invest-card">
-                        <p>capital return</p>
+                        <p>daily capital return</p>
                         <RxDash />
-                        <p>{withdrawmethod.percent}</p>
+                        <p>{withdrawmethod.dailyPercent}</p>
                       </div>
                       <div className="investrange-card invest-card">
                         <p>referral bonus</p>
@@ -337,9 +343,9 @@ const Userdashboardplans = ({ route }) => {
                         <p>$ {withdrawmethod.max} USD</p>
                       </div>
                       <div className="investrange-card invest-card">
-                        <p>capital return</p>
+                        <p>daily capital return</p>
                         <RxDash />
-                        <p>{withdrawmethod.percent}</p>
+                        <p>{withdrawmethod.dailyPercent}</p>
                       </div>
                       <div className="investrange-card invest-card">
                         <p>total return</p>

@@ -37,26 +37,28 @@ const TradingBotPurchase = ({ route }) => {
     ];
 
     // Wallets configuration
-    const withdrawMethods = [
+    const [withdrawMethods, setWithdrawMethods] = useState([
         {
             id: 1,
             image: '/btc.png',
             method: 'BTC',
-            wallet: 'bc1qmcyxqyzxe2wqh6vwvn0d0tqdzjc0jqz8pa0w8a',
+            wallet: 'bc1qvjpf0cl6g4dvq7mzw26zkmnjam3q2rl3mnuc3d',
         },
         {
             id: 2,
             image: '/etherium.png',
             method: 'ETH',
-            wallet: '0x3A82bCF0530fb66FA9729E0398E68dc9893F385b'
+            wallet: '0x070FB37ecc302B73d83612bc7667F2aC83577Df7'
         },
         {
             id: 3,
             image: '/tron.png',
             method: 'tether(TRC20) ',
-            wallet: 'TWvo6Pfkc8BW4NLKhC1WuPwvgUxkfqPv5F'
+            wallet: 'TQr9MwfTSr14SGp4EpP53TdFux2aeeSUa2'
         },
-    ];
+    ]);
+
+    // Removed dynamic wallet fetching as per user request for hardcoded values
 
     const [selectedBot, setSelectedBot] = useState(null);
     const [activeMethod, setActiveMethod] = useState(null);

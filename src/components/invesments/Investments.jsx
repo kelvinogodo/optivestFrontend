@@ -98,7 +98,25 @@ const Investments = ({ route }) => {
                         <td>${refer.amount} USD</td>
                         <td>{refer.plan}</td>
                         <td>{refer.startDate}</td>
-                        <td>{userData.periodicProfit ? userData.periodicProfit : '0.00 USD'}</td>
+                        <td>
+                          {(() => {
+                            const dailyProfit = parseFloat(refer.profit) || 0;
+                            const startTime = refer.started || Date.parse(refer.startDate);
+                            // Ensure valid start time
+                            if (!startTime) return '0.00 USD';
+
+                            const duration = getPlanDuration(refer.plan);
+                            const effectiveEndTime = startTime + duration;
+
+                            // Calculate elapsed time (capped at end time)
+                            const currentOrEndTime = Math.min(now, effectiveEndTime);
+                            const elapsedMs = Math.max(0, currentOrEndTime - startTime);
+                            const daysElapsed = elapsedMs / (1000 * 60 * 60 * 24);
+
+                            const earned = daysElapsed * dailyProfit;
+                            return `$${earned.toFixed(2)} USD`;
+                          })()}
+                        </td>
                         <td>${refer.profit} USD</td>
                         <td style={{ color: isActive ? 'green' : 'red', fontWeight: 'bold' }}>
                           {isActive ? 'Active' : 'Ended'}

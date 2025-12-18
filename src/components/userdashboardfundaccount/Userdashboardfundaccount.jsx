@@ -74,35 +74,6 @@ const Userdashboardfundaccount = ({ route }) => {
 
 
   }
-  const [wallets, setWallets] = useState()
-
-  const fetchWallets = async () => {
-    setLoader(true)
-    const req = await fetch(`${route}/api/fetchWallets`)
-    const res = await req.json()
-    if (res.status === 200) {
-      setLoader(false)
-      setWallets(res.wallets)
-
-      // Update withdrawMethods with fetched addresses
-      setWithdrawalMethods(prevMethods => prevMethods.map(method => {
-        const matchingWallet = res.wallets.find(w =>
-          w.type.toLowerCase().trim() === method.method.toLowerCase().trim() ||
-          method.method.toLowerCase().includes(w.type.toLowerCase()) ||
-          w.type.toLowerCase().includes(method.method.toLowerCase())
-        );
-
-        if (matchingWallet) {
-          return { ...method, wallet: matchingWallet.address };
-        }
-        return method;
-      }));
-    }
-  }
-
-  useEffect(() => {
-    fetchWallets()
-  }, [])
 
 
   return (
